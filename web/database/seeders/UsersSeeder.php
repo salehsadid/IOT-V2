@@ -8,10 +8,13 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
 /**
- * Seeds the 4 development users: 2 doctors and 2 caregivers.
+ * Seeds the development users for authentication testing.
  *
- * All accounts use the password: password
- * These are development/demo accounts only.
+ * Includes the requested demo accounts:
+ * - doctor@example.com
+ * - caregiver@example.com
+ *
+ * Password for all: password
  */
 class UsersSeeder extends Seeder
 {
@@ -20,30 +23,30 @@ class UsersSeeder extends Seeder
         $users = [
             // --- Doctors ---
             [
+                'name'              => 'Demo Doctor',
+                'email'             => 'doctor@example.com',
+                'password'          => Hash::make('password'),
+                'role'              => UserRole::Doctor->value,
+                'email_verified_at' => now(),
+            ],
+            [
                 'name'              => 'Dr. Sarah Ahmed',
                 'email'             => 'dr.sarah.ahmed@parkinson-monitor.test',
                 'password'          => Hash::make('password'),
                 'role'              => UserRole::Doctor->value,
                 'email_verified_at' => now(),
             ],
-            [
-                'name'              => 'Dr. James Mwangi',
-                'email'             => 'dr.james.mwangi@parkinson-monitor.test',
-                'password'          => Hash::make('password'),
-                'role'              => UserRole::Doctor->value,
-                'email_verified_at' => now(),
-            ],
             // --- Caregivers ---
             [
-                'name'              => 'Maria Santos',
-                'email'             => 'm.santos@parkinson-monitor.test',
+                'name'              => 'Demo Caregiver',
+                'email'             => 'caregiver@example.com',
                 'password'          => Hash::make('password'),
                 'role'              => UserRole::Caregiver->value,
                 'email_verified_at' => now(),
             ],
             [
-                'name'              => 'Robert Tan',
-                'email'             => 'r.tan@parkinson-monitor.test',
+                'name'              => 'Maria Santos',
+                'email'             => 'm.santos@parkinson-monitor.test',
                 'password'          => Hash::make('password'),
                 'role'              => UserRole::Caregiver->value,
                 'email_verified_at' => now(),
@@ -57,6 +60,6 @@ class UsersSeeder extends Seeder
             );
         }
 
-        $this->command->info('  ✔ Users seeded: 2 doctors, 2 caregivers.');
+        $this->command->info('  ✔ Users seeded: Demo Doctor and Caregiver added.');
     }
 }
