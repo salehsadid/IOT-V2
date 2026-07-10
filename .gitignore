@@ -1,0 +1,175 @@
+# =============================================================================
+# ESP32 Parkinson's Monitoring System — Root .gitignore
+# =============================================================================
+# This monorepo will contain:
+#   web/        Laravel application
+#   firmware/   ESP32 PlatformIO project
+#   docs/       Documentation (fully tracked)
+# =============================================================================
+
+# =============================================================================
+# ENVIRONMENT FILES
+# Keep .env.example files trackable so others can bootstrap their environment.
+# Never commit .env files that contain real credentials or secrets.
+# =============================================================================
+.env
+.env.local
+.env.*.local
+web/.env
+web/.env.backup
+firmware/include/secrets.h
+firmware/include/wifi_credentials.h
+
+# =============================================================================
+# SQLITE (this project uses MySQL — SQLite file must never be committed)
+# Laravel's post-install hook may create database/database.sqlite by default.
+# This file must be ignored to prevent accidental substitution of MySQL.
+# =============================================================================
+web/database/database.sqlite
+web/database/*.sqlite
+
+# =============================================================================
+# PHP / COMPOSER (Laravel)
+# =============================================================================
+web/vendor/
+composer.phar
+
+# =============================================================================
+# LARAVEL SPECIFIC
+# =============================================================================
+web/bootstrap/cache/*.php
+web/storage/*.key
+web/public/hot
+web/public/storage
+web/storage/app/public
+web/storage/framework/cache/
+web/storage/framework/sessions/
+web/storage/framework/testing/
+web/storage/framework/views/
+web/storage/logs/
+*.log
+
+# =============================================================================
+# NODE.JS / NPM (Laravel frontend asset compilation)
+# =============================================================================
+node_modules/
+web/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+
+# =============================================================================
+# FRONTEND BUILD ARTIFACTS
+# =============================================================================
+web/public/build/
+web/public/js/
+web/public/css/
+hot
+
+# =============================================================================
+# PLATFORMIO (ESP32 Firmware)
+# =============================================================================
+firmware/.pio/
+firmware/.pioenvs/
+firmware/.piolibdeps/
+.pio/
+.pioenvs/
+
+# =============================================================================
+# ARDUINO / PLATFORMIO BUILD OUTPUTS
+# =============================================================================
+*.elf
+*.bin
+*.hex
+*.map
+*.d
+*.o
+*.a
+
+# =============================================================================
+# IDE AND EDITOR FILES
+# =============================================================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# IntelliJ / PHPStorm / WebStorm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse / Arduino IDE
+.project
+.cproject
+.settings/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+\#*\#
+.emacs.desktop
+.emacs.desktop.lock
+
+# =============================================================================
+# OPERATING SYSTEM FILES
+# =============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+.Trash-*
+
+# =============================================================================
+# TEMPORARY AND CACHE FILES
+# =============================================================================
+*.tmp
+*.temp
+*.cache
+.cache/
+tmp/
+temp/
+
+# =============================================================================
+# TESTING AND COVERAGE
+# =============================================================================
+web/coverage/
+.phpunit.result.cache
+phpunit.xml
+
+# =============================================================================
+# IMPORTANT: DO NOT IGNORE THESE
+# These must remain tracked for project bootstrapping and collaboration:
+#   .env.example          — Laravel environment template
+#   firmware/platformio.ini — PlatformIO project config
+#   docs/                 — All documentation
+#   README.md             — Project readme
+# =============================================================================
+!.env.example
+!web/.env.example
+!firmware/platformio.ini
