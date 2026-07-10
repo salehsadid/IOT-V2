@@ -70,7 +70,7 @@ The system detects **hand tremor** and **Freezing of Gait (FOG)** entirely on-de
 |---|---|---|
 | 0 | Workspace & Environment Setup | ✅ Completed |
 | 1 | Laravel + MySQL Foundation | ✅ Completed — Laravel 12 in `web/`, MySQL `parkinson_monitor` |
-| 2 | Database Schema + Models | ⬜ Pending |
+| 2 | Database Schema + Models | ✅ Completed — 4 domain tables, 5 models, 7 enums, 23 seed events |
 | 3 | Authentication + Doctor/Caregiver Roles | ⬜ Pending |
 | 4 | Laravel Blade Dashboard Foundation | ⬜ Pending |
 | 5 | ESP32 Firmware Foundation | ⬜ Pending |

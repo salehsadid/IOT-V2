@@ -1,6 +1,6 @@
 # Phase Status Tracker
 
-> **Last Updated:** Phase 1  
+> **Last Updated:** Phase 2  
 > **Development Model:** Strictly sequential. No phase begins until the previous phase is manually verified and explicitly approved.
 
 ---
@@ -78,13 +78,34 @@
 
 ## Phase 2 — Database Schema + Models
 
-**Status:** ⬜ Not Started
+**Status:** ✅ Completed
 
-### Planned Objectives
-- Design and create migrations for: devices, tremor_events, fog_events, commands, logs
-- Generate Eloquent models
-- Define relationships
-- Verify schema in MySQL
+### Objectives Achieved
+- [x] 7 PHP 8.1 backed enums created (`UserRole`, `PatientStatus`, `DeviceStatus`, `EventType`, `TremorLevel`, `CommandType`, `CommandStatus`)
+- [x] 5 migrations created and ran successfully (Batch 2)
+- [x] `users` table extended with `role` column (via separate migration, no re-creation)
+- [x] `patients` table created — no `assigned_doctor_id` (deferred to Phase 3)
+- [x] `devices` table created — `device_uid` unique, `api_token` string(100) for future hashing
+- [x] `detection_events` table created — `event_uuid` UUID unique indexed for idempotency
+- [x] `device_commands` table created — full `pending→sent→acknowledged→failed` lifecycle
+- [x] MariaDB 10.4 timestamp compatibility fixed (`useCurrent()` on NOT NULL timestamps)
+- [x] 5 Eloquent models created/updated with enum casts and relationships
+- [x] 5 factories created/updated with realistic states
+- [x] 5 seeders created, orchestrated by `DatabaseSeeder`
+- [x] Seed data: 4 users, 5 patients, 5 devices, 23 detection events, 2 device commands
+- [x] Automated verification: 49/49 tests passed
+- [x] Phase report: `docs/phase-reports/phase-02-report.md`
+- [x] Manual testing guide: `docs/testing-guides/phase-02-manual-testing.md`
+- [x] No authentication, no dashboard, no API, no firmware
+- [x] MySQL ONLY — no SQLite, no PostgreSQL
+
+### Project-Domain Tables Created
+| Table | Migration |
+|---|---|
+| `patients` | `2026_07_11_000002_create_patients_table` |
+| `devices` | `2026_07_11_000003_create_devices_table` |
+| `detection_events` | `2026_07_11_000004_create_detection_events_table` |
+| `device_commands` | `2026_07_11_000005_create_device_commands_table` |
 
 ---
 
