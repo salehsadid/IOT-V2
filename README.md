@@ -74,7 +74,7 @@ The system detects **hand tremor** and **Freezing of Gait (FOG)** entirely on-de
 | 3 | Authentication + Doctor/Caregiver Roles | ✅ Completed — Custom Auth, RoleMiddleware, Dashboard |
 | 4 | Laravel Blade Dashboard Foundation | ✅ Completed — Custom CSS Layout, Sidebar, Navbar, Placeholder Cards |
 | 5 | ESP32 Firmware Foundation | ✅ Completed — Arduino IDE Structure, Class Skeletons |
-| 6 | Dual MPU6050 Integration | ⬜ Pending |
+| 6 | Dual MPU6050 Integration | ✅ Completed — I2C Initialization, AD0 Configuration, Ping Detection |
 | 7 | Tremor Detection Logic | ⬜ Pending |
 | 8 | FOG Detection State Machine | ⬜ Pending |
 | 9 | OLED Integration | ⬜ Pending |

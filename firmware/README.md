@@ -29,6 +29,19 @@ No external libraries are required to compile the Phase 5 foundation. Future pha
 - ArduinoJson
 - HTTPClient
 
+## ESP32 Wiring
+
+| Component | ESP32 Pin | Note |
+|-----------|-----------|------|
+| I2C SDA   | GPIO 21   | Must be shared across both sensors |
+| I2C SCL   | GPIO 22   | Must be shared across both sensors |
+| Power     | 3.3V      | VCC of both sensors to ESP32 3.3V |
+| Ground    | GND       | Common ground for ESP32 and both sensors |
+
+### MPU6050 Configuration
+- **Hand MPU6050 (0x68):** Connect `AD0` pin to `GND` (or leave floating on most breakout boards).
+- **Leg MPU6050 (0x69):** **CRITICAL:** Connect `AD0` pin to `3.3V`. This changes the I2C address to 0x69, allowing both sensors to share the same I2C bus.
+
 ## Current Implementation Status
 - [x] Folder Structure
 - [x] Class Skeletons

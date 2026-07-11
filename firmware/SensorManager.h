@@ -12,6 +12,9 @@ public:
 private:
     SystemState* systemState;
     
+    // Check if a sensor is responding at a given address
+    bool checkSensor(uint8_t address);
+    
     // Future placeholder methods
     void initHandSensor();
     void initLegSensor();
