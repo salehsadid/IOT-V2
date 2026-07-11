@@ -72,8 +72,8 @@ The system detects **hand tremor** and **Freezing of Gait (FOG)** entirely on-de
 | 1 | Laravel + MySQL Foundation | ✅ Completed — Laravel 12 in `web/`, MySQL `parkinson_monitor` |
 | 2 | Database Schema + Models | ✅ Completed — 4 domain tables, 5 models, 7 enums, 23 seed events |
 | 3 | Authentication + Doctor/Caregiver Roles | ✅ Completed — Custom Auth, RoleMiddleware, Dashboard |
-| 4 | Laravel Blade Dashboard Foundation | ⬜ Pending |
-| 5 | ESP32 Firmware Foundation | ⬜ Pending |
+| 4 | Laravel Blade Dashboard Foundation | ✅ Completed — Custom CSS Layout, Sidebar, Navbar, Placeholder Cards |
+| 5 | ESP32 Firmware Foundation | ✅ Completed — Arduino IDE Structure, Class Skeletons |
 | 6 | Dual MPU6050 Integration | ⬜ Pending |
 | 7 | Tremor Detection Logic | ⬜ Pending |
 | 8 | FOG Detection State Machine | ⬜ Pending |

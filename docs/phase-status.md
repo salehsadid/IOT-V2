@@ -1,6 +1,6 @@
 # Phase Status Tracker
 
-> **Last Updated:** Phase 3  
+> **Last Updated:** Phase 5  
 > **Development Model:** Strictly sequential. No phase begins until the previous phase is manually verified and explicitly approved.
 
 ---
@@ -129,27 +129,39 @@
 
 ## Phase 4 — Laravel Blade Dashboard Foundation
 
-**Status:** ⬜ Not Started
+**Status:** ✅ Completed
 
-### Planned Objectives
-- Create authenticated dashboard layout
-- Implement navigation for: Events, FOG Log, Alerts, Device Status
-- Build skeleton views (no live data yet)
-- Apply basic CSS styling
+### Objectives Achieved
+- [x] Created `layouts.app` master layout
+- [x] Implemented UI partials (`sidebar`, `navbar`, `footer`)
+- [x] Designed responsive layout using completely custom CSS (No Bootstrap/Tailwind)
+- [x] Included mobile-responsive sidebar with toggle behavior
+- [x] Added placeholder dashboard cards (Patients, Devices, Events) with dummy values
+- [x] Added placeholder "Recent Activity" table with dummy data
+- [x] Sidebar navigation UI created with active state on Dashboard
+- [x] Replaced old temporary `dashboard.blade.php` with structured `dashboard/index.blade.php`
+- [x] Kept all backend functionality strictly placeholder as required
+- [x] Automated verification: 12/12 tests passed
+- [x] Created Phase 4 report and manual testing guide
 
 ---
 
 ## Phase 5 — ESP32 Firmware Foundation
 
-**Status:** ⬜ Not Started
+**Status:** ✅ Completed
 
-### Planned Objectives
-- Install PlatformIO CLI
-- Create PlatformIO project for ESP32
-- Configure board, framework (Arduino), and dependencies
-- Implement Wi-Fi connection
-- Implement NTP time synchronization
-- Verify serial monitor output
+### Objectives Achieved
+- [x] Created `firmware/` directory and Arduino-compatible structure (`firmware.ino`)
+- [x] Implemented `Config` class for centralized pins, network, and I2C address settings
+- [x] Included `secrets.h.example` to protect sensitive credentials (WiFi, API Token)
+- [x] Implemented a lightweight Serial `Logger` utility
+- [x] Created `SystemState` class to manage system readiness state safely
+- [x] Designed skeleton managers for hardware separation: `SensorManager`, `DisplayManager`, `CueingController`
+- [x] Applied proper header guards (`#pragma once`) across all headers
+- [x] Orchestrated initialization in `setup()` and periodic loops in `loop()`
+- [x] Ensured strict compliance: NO actual sensor, display, or WiFi logic implemented
+- [x] Generated `README.md` inside firmware directory
+- [x] Phase 5 report and manual testing guide created
 
 ---
 
