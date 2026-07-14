@@ -3,7 +3,7 @@
 #include "Logger.h"
 
 ApiClient::ApiClient(SystemState* state) 
-    : systemState(state), lastWifiCheckTime(0),
+    : systemState(state), lastWifiCheckTime(0), lastHeartbeatTime(0),
       inTremorEvent(false), tremorStartTime(0), currentStartLevel(0), currentMaxLevel(0),
       inFogEvent(false), fogStartTime(0) {
 }
@@ -54,6 +54,11 @@ void ApiClient::update() {
 
     if (systemState == nullptr) return;
 
+    if (currentMillis - lastHeartbeatTime >= 5000) {
+        lastHeartbeatTime = currentMillis;
+        sendHeartbeat();
+    }
+
     // --- Tremor Tracking ---
     uint8_t currentTremor = systemState->getTremorLevel();
     if (currentTremor > 0) {
@@ -83,7 +88,9 @@ void ApiClient::update() {
         if (!inFogEvent) {
             inFogEvent = true;
             fogStartTime = currentMillis;
-            Logger::info("[API] FOG event started");
+            Logger::info("[API] FOG event started - Forcing immediate heartbeat");
+            sendHeartbeat(); // Force immediate update to web UI!
+            lastHeartbeatTime = currentMillis;
         }
     } else {
         if (inFogEvent) {
@@ -91,6 +98,8 @@ void ApiClient::update() {
             unsigned long duration = currentMillis - fogStartTime;
             Logger::info("[API] FOG event ended. Duration: " + String(duration) + " ms");
             uploadFogEvent(duration);
+            sendHeartbeat(); // Force update to clear web UI
+            lastHeartbeatTime = currentMillis;
         }
     }
 }
@@ -98,7 +107,7 @@ void ApiClient::update() {
 void ApiClient::uploadTremorEvent(uint8_t startLvl, uint8_t maxLvl, unsigned long durationMs) {
     // Simple JSON construction without needing ArduinoJson library
     String payload = "{";
-    payload += "\"device_id\":\"ESP32-001\",";
+    payload += "\"device_id\":\"ESP32-A1B2C3D4\",";
     payload += "\"event_type\":\"TREMOR\",";
     payload += "\"start_level\":" + String(startLvl) + ",";
     payload += "\"max_level\":" + String(maxLvl) + ",";
@@ -110,7 +119,7 @@ void ApiClient::uploadTremorEvent(uint8_t startLvl, uint8_t maxLvl, unsigned lon
 
 void ApiClient::uploadFogEvent(unsigned long durationMs) {
     String payload = "{";
-    payload += "\"device_id\":\"ESP32-001\",";
+    payload += "\"device_id\":\"ESP32-A1B2C3D4\",";
     payload += "\"event_type\":\"FOG\",";
     payload += "\"duration_ms\":" + String(durationMs);
     payload += "}";
@@ -154,4 +163,31 @@ bool ApiClient::sendPostRequest(String payload) {
 
     http.end();
     return success;
+}
+
+void ApiClient::sendHeartbeat() {
+    if (WiFi.status() != WL_CONNECTED) return;
+    
+    String payload = "{";
+    payload += "\"device_id\":\"ESP32-A1B2C3D4\",";
+    payload += "\"hand_ok\":" + String(systemState->isHandSensorReady() ? "true" : "false") + ",";
+    payload += "\"leg_ok\":" + String(systemState->isLegSensorReady() ? "true" : "false") + ",";
+    payload += "\"tremor_level\":" + String(systemState->getTremorLevel()) + ",";
+    payload += "\"fog_active\":" + String(systemState->isFogActive() ? "true" : "false");
+    payload += "}";
+    
+    String serverUrl = Config::getServerUrl() + "/api/heartbeat";
+    HTTPClient http;
+    http.begin(serverUrl);
+    http.addHeader("Content-Type", "application/json");
+    
+    int httpResponseCode = http.POST(payload);
+    if (httpResponseCode > 0) {
+        String response = http.getString();
+        if (response.indexOf("\"command\":\"STOP_BUZZER\"") >= 0) {
+            Logger::info("[API] Received STOP_BUZZER command from server.");
+            systemState->setRemoteBuzzerStop(true);
+        }
+    }
+    http.end();
 }

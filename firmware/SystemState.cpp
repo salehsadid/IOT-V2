@@ -13,7 +13,8 @@ SystemState::SystemState()
       legGyroMag(0.0f),
       currentTremorLevel(0),
       currentMotionState(REST),
-      fogActive(false) {
+      fogActive(false),
+      remoteBuzzerStop(false) {
 }
 
 void SystemState::setWifiConnected(bool connected) {
@@ -62,6 +63,14 @@ bool SystemState::isServerConnected() const {
 
 bool SystemState::isCueingActive() const {
     return cueingActive;
+}
+
+void SystemState::setRemoteBuzzerStop(bool stop) {
+    remoteBuzzerStop = stop;
+}
+
+bool SystemState::getRemoteBuzzerStop() const {
+    return remoteBuzzerStop;
 }
 
 void SystemState::setHandAccelMagnitude(float mag) { handAccelMag = mag; }

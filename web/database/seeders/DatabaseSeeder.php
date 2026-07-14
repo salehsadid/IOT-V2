@@ -33,10 +33,8 @@ class DatabaseSeeder extends Seeder
         $this->command->info('');
         $this->command->info('  ✔ All seeders completed successfully.');
         $this->command->info('');
-        $this->command->info('  Demo accounts (password: password):');
-        $this->command->info('    Doctor:    dr.sarah.ahmed@parkinson-monitor.test');
-        $this->command->info('    Doctor:    dr.james.mwangi@parkinson-monitor.test');
-        $this->command->info('    Caregiver: m.santos@parkinson-monitor.test');
-        $this->command->info('    Caregiver: r.tan@parkinson-monitor.test');
+        $this->command->info('  Admin Account:');
+        $this->command->info('    Email:    admin@parkinson-monitor.test');
+        $this->command->info('    Password: password');
     }
 }

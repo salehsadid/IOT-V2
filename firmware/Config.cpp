@@ -8,6 +8,7 @@
 #define SECRET_WIFI_SSID "PLACEHOLDER_SSID"
 #define SECRET_WIFI_PASS "PLACEHOLDER_PASS"
 #define SECRET_API_TOKEN "PLACEHOLDER_TOKEN"
+#define SECRET_SERVER_URL "http://parkinson-monitor.test"
 #endif
 
 void Config::init() {
@@ -23,7 +24,7 @@ String Config::getWifiPass() {
 }
 
 String Config::getServerUrl() {
-    return String("http://parkinson-monitor.test/api"); // Placeholder server URL
+    return String(SECRET_SERVER_URL);
 }
 
 String Config::getApiToken() {

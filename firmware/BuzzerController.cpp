@@ -20,8 +20,12 @@ void BuzzerController::update() {
     if (systemState == nullptr || !Config::BUZZER_ENABLED) return;
 
     if (systemState->isFogActive()) {
-        if (!isAlerting) {
-            startBuzzer();
+        if (systemState->getRemoteBuzzerStop()) {
+            if (isAlerting) stopBuzzer();
+        } else {
+            if (!isAlerting) {
+                startBuzzer();
+            }
         }
 
         unsigned long currentMillis = millis();

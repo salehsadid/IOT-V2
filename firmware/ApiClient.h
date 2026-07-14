@@ -15,6 +15,7 @@ public:
 private:
     SystemState* systemState;
     unsigned long lastWifiCheckTime;
+    unsigned long lastHeartbeatTime;
 
     // Tremor tracking
     bool inTremorEvent;
@@ -31,5 +32,6 @@ private:
     
     void uploadTremorEvent(uint8_t startLvl, uint8_t maxLvl, unsigned long durationMs);
     void uploadFogEvent(unsigned long durationMs);
+    void sendHeartbeat();
     bool sendPostRequest(String payload);
 };

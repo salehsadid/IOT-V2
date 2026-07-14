@@ -113,6 +113,7 @@ void DetectionManager::changeMotionState(MotionState newState) {
             systemState->setFogActive(true);
         } else if (newState == REST || newState == WALKING) {
             systemState->setFogActive(false);
+            systemState->setRemoteBuzzerStop(false);
         }
     }
 }

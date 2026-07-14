@@ -22,6 +22,7 @@ public:
     void setOledReady(bool ready);
     void setServerConnected(bool connected);
     void setCueingActive(bool active);
+    void setRemoteBuzzerStop(bool stop);
 
     // Sensor Magnitude Setters
     void setHandAccelMagnitude(float mag);
@@ -41,6 +42,7 @@ public:
     bool isOledReady() const;
     bool isServerConnected() const;
     bool isCueingActive() const;
+    bool getRemoteBuzzerStop() const;
     
     // Detection State Getters
     uint8_t getTremorLevel() const;
@@ -60,6 +62,7 @@ private:
     bool oledReady;
     bool serverConnected;
     bool cueingActive;
+    bool remoteBuzzerStop;
     
     float handAccelMag;
     float handGyroMag;
