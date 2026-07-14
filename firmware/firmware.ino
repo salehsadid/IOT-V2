@@ -3,14 +3,16 @@
 #include "Logger.h"
 #include "SystemState.h"
 #include "SensorManager.h"
+#include "DetectionManager.h"
 #include "DisplayManager.h"
-#include "CueingController.h"
+#include "BuzzerController.h"
 
 // Global instances for core architecture
 SystemState systemState;
 SensorManager sensorManager(&systemState);
+DetectionManager detectionManager(&systemState);
 DisplayManager displayManager(&systemState);
-CueingController cueingController(&systemState);
+BuzzerController buzzerController(&systemState);
 
 void setup() {
     // 1. Initialize Logger (Serial)
@@ -22,8 +24,9 @@ void setup() {
     
     // 3. Initialize Core Managers
     sensorManager.init();
+    detectionManager.init();
     displayManager.init();
-    cueingController.init();
+    buzzerController.init();
     
     Logger::info("Setup complete. Entering main loop.");
 }
@@ -31,10 +34,11 @@ void setup() {
 void loop() {
     // Update system state & managers periodically
     sensorManager.update();
+    detectionManager.update();
     displayManager.update();
-    cueingController.update();
+    buzzerController.update();
     
-    // Future placeholders for detection logic and HTTP API communication
+    // Future placeholders for HTTP API communication
     // will be inserted here in subsequent phases.
     
     delay(10); // Prevent watchdog timeout and reduce CPU load

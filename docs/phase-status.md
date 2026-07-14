@@ -1,6 +1,6 @@
 # Phase Status Tracker
 
-> **Last Updated:** Phase 6  
+> **Last Updated:** Phase 8  
 > **Development Model:** Strictly sequential. No phase begins until the previous phase is manually verified and explicitly approved.
 
 ---
@@ -182,111 +182,118 @@
 
 ---
 
-## Phase 7 — Tremor Detection Logic
+## Phase 7 — Raw MPU6050 Data Acquisition
 
-**Status:** ⬜ Not Started
+**Status:** ✅ Completed
 
-### Planned Objectives
-- Implement signal processing on wrist MPU6050 data
-- Define tremor thresholds (amplitude, frequency, duration)
-- Implement debounce window
-- Classify tremor levels: None / Mild / Moderate / Severe
-- Test against simulated tremor movements
-
----
-
-## Phase 8 — FOG Detection State Machine
-
-**Status:** ⬜ Not Started
-
-### Planned Objectives
-- Implement gait analysis on ankle MPU6050 data
-- Implement state machine: Walking → Candidate → FOG Confirmed → Recovery
-- Define FOG thresholds and timing windows
-- Test against simulated FOG movements
+### Objectives Achieved
+- [x] Implemented proper initialization of both MPU6050 sensors.
+- [x] Woke both sensors from sleep mode.
+- [x] Configured accelerometer to ±2g and gyroscope to ±250°/s.
+- [x] Implemented reading of raw Accel and Gyro values for Hand and Leg sensors.
+- [x] Converted raw values into human-readable units (g and °/s).
+- [x] Created formatted Serial output every 100ms.
+- [x] Handled sensor disconnection gracefully without freezing the program.
+- [x] Created debug mode constant `DEBUG_SENSOR_OUTPUT`.
+- [x] Phase 7 report and manual testing guide created.
+- [x] (Tremor detection deferred to future phases based on new roadmap)
 
 ---
 
-## Phase 9 — OLED Integration
+## Phase 8 — Threshold Calibration & Motion Analysis
 
-**Status:** ⬜ Not Started
+**Status:** ✅ Completed
 
-### Planned Objectives
-- Connect SSD1306 OLED display
-- Display system status: Normal / Tremor Detected / FOG Detected / Cueing Active
-- Display tremor severity level
-- Display Wi-Fi connection status
-
----
-
-## Phase 10 — Vibration Cueing
-
-**Status:** ⬜ Not Started
-
-### Planned Objectives
-- Design and wire vibration motor driver circuit (MOSFET/BJT)
-- Implement rhythmic PWM cueing pattern from ESP32
-- Trigger cueing on FOG confirmed
-- Stop cueing when FOG state machine exits FOG state
+### Objectives Achieved
+- [x] Defined and added threshold configuration to `Config.h` (REST_GYRO_THRESHOLD, HAND_TREMOR_THRESHOLD, LEG_WALKING_THRESHOLD).
+- [x] Implemented math helper functions in `SensorManager` to calculate 3D magnitude for Acceleration and Gyroscope.
+- [x] Improved Serial Debug output to cleanly display magnitudes for reference.
+- [x] Confirmed calculations operate on experimental data without implementing detection logic.
+- [x] Created `phase-08-report.md` and `phase-08-manual-testing.md`.
+- [x] Updated project roadmap across all documentation.
 
 ---
 
-## Phase 11 — ESP32 to Laravel API Integration
+## Phase 9 — Threshold-Based Tremor Detection
 
-**Status:** ⬜ Not Started
+**Status:** ✅ Completed
 
-### Planned Objectives
-- Implement Laravel API endpoints: POST /api/events, GET /api/commands, POST /api/commands/{id}/ack
-- Implement ESP32 HTTP client (POST events, GET commands)
-- Implement API token authentication
-- Test round-trip: ESP32 event → MySQL storage → API response
-
----
-
-## Phase 12 — Event Logging and Web Alerts
-
-**Status:** ⬜ Not Started
-
-### Planned Objectives
-- Display tremor events on dashboard with severity and timestamp
-- Display FOG events on dashboard with timestamp and duration
-- Implement alert notification for active FOG / cueing
-- Implement paginated event history
+### Objectives Achieved
+- [x] Processed 8 real-world demonstration data files to analyze Tremor and FOG scenarios.
+- [x] Defined 4 Tremor levels (0, 1, 2, 3) with precise thresholds in `Config.h`.
+- [x] Implemented a 10-sample Moving Average (MA) inside `DetectionManager` to stabilize fluctuating real-time readings.
+- [x] Added leg movement suppression logic (Tremor Level forced to 0 if Leg Gyro MA > 15).
+- [x] Tested mathematically to ensure thresholds match the demonstration data exactly.
 
 ---
 
-## Phase 13 — Remote Cueing Stop
+## Phase 10 — Threshold-Based Freezing of Gait (FOG) Detection
 
-**Status:** ⬜ Not Started
+**Status:** ✅ Completed
 
-### Planned Objectives
-- Implement Stop Cueing button in dashboard (Doctor/Caregiver only)
-- Store pending Stop Cueing command in MySQL
-- ESP32 polls and receives command
-- ESP32 deactivates vibration motor and acknowledges command
-- Command execution logged with timestamp and user
-
----
-
-## Phase 14 — Full System Integration
-
-**Status:** ⬜ Not Started
-
-### Planned Objectives
-- Run full system with hardware: both MPU6050s, OLED, vibration motor
-- Verify end-to-end flow: sensor → detection → OLED → API → dashboard → cueing stop
-- Fix integration issues
+### Objectives Achieved
+- [x] Analyzed real-world calibration data to differentiate Standing (Leg Gyro < 5.0) from FOG (Leg Gyro ~ 11.0 to 26.0).
+- [x] Defined a 6-state Motion State Machine (`REST`, `POSSIBLE_WALKING`, `WALKING`, `POSSIBLE_FOG`, `FOG_CONFIRMED`, `RECOVERY`).
+- [x] Implemented a 2-second confirmation timer before entering FOG to prevent false positives when coming to a normal stop.
+- [x] Integrated state handling into `SystemState` and detection logic cleanly into `DetectionManager`.
+- [x] Limited serial outputs to print ONLY when the motion state actually transitions.
 
 ---
 
-## Phase 15 — Calibration, Reliability, Testing, and Final Audit
+## Phase 11 — OLED Display Integration
+
+**Status:** ✅ Completed
+
+### Objectives Achieved
+- [x] Initialized the SSD1306 OLED via I2C inside `DisplayManager`.
+- [x] Designed Boot, Normal, Alert, and Error screens.
+- [x] Populated the screens dynamically using variables from `SystemState`.
+- [x] Configured display refresh rate to 500ms to avoid screen flickering.
+- [x] Alert screens override normal monitoring screens for 3 seconds upon tremor or FOG detection.
+
+---
+
+## Phase 12 — FOG Audible Cueing System (Buzzer)
+
+**Status:** ✅ Completed
+
+### Objectives Achieved
+- [x] Configured buzzer timings in `Config.h` (400ms ON / 300ms OFF).
+- [x] Implemented a non-blocking `millis()` toggle inside `BuzzerController`.
+- [x] Restricted buzzer activation *strictly* to `FOG_CONFIRMED` events (Tremors do not beep).
+- [x] Added clean serial logging for Alert Started/Stopped.
+- [x] Validated that the buzzer halts instantly upon FOG Recovery.
+
+---
+
+## Phase 13 — ESP32 ↔ Laravel API Communication
 
 **Status:** ⬜ Not Started
 
 ### Planned Objectives
-- Calibrate sensor thresholds for realistic tremor and FOG scenarios
-- Test edge cases: Wi-Fi loss recovery, sensor disconnection, API timeout
-- Verify role-based access control
-- Perform final code audit and cleanup
-- Write final system documentation and user guide
-- Prepare university submission package
+- Implement Laravel API endpoints for events and commands.
+- Implement ESP32 HTTP client.
+- Test round-trip: ESP32 event → MySQL storage → API response.
+
+---
+
+## Phase 14 — Live Dashboard, Event Logging & Remote Alarm Control
+
+**Status:** ⬜ Not Started
+
+### Planned Objectives
+- Display events on dashboard with severity, duration, and timestamp.
+- Implement Stop Alarm button in dashboard.
+- Store pending commands in MySQL and poll from ESP32.
+- ESP32 acknowledges command and stops buzzer.
+
+---
+
+## Phase 15 — Full System Integration, Testing & Final Validation
+
+**Status:** ⬜ Not Started
+
+### Planned Objectives
+- Run full hardware system.
+- Test edge cases (Wi-Fi loss, sensor disconnect).
+- Write final system documentation.

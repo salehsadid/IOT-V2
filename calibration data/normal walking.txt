@@ -1,0 +1,2873 @@
+))iy1   =   FR  z  #))#  iK )!Y: 0.215  Z: 0.072
+Raw Gyro  -> X: -1.397  Y: 0.305  Z: -0.611
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.026 g
+Gyro Mag  : 18.170 °/s
+Raw Accel -> X: 0.344  Y: 0.594  Z: 0.763
+Raw Gyro  -> X: 7.939  Y: 15.176  Z: 6.069
+---
+LEG SENSOR
+Accel Mag : 0.964 g
+Gyro Mag  : 11.209 °/s
+Raw Accel -> X: -0.936  Y: 0.215  Z: 0.092
+Raw Gyro  -> X: 6.687  Y: 8.763  Z: 2.031
+========================
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:4876
+ho 0 tail 12 room 4
+load:0x40078000,len:16560
+load:0x40080400,len:3500
+entry 0x400805b4
+[INFO] Logger initialized.
+[INFO] Starting Parkinson's Monitoring System ESP32 Firmware...
+[INFO] Initializing I2C...
+[INFO] Hand MPU6050 detected (0x68). Waking up and configuring...
+[INFO] Leg MPU6050 detected (0x69). Waking up and configuring...
+[INFO] Initializing DetectionManager...
+[INFO] DetectionManager initialization complete.
+[INFO] Initializing DisplayManager at address 0x3c
+[INFO] DisplayManager initialization complete.
+[INFO] Initializing BuzzerController on pin 25
+[INFO] BuzzerController initialization complete.
+[INFO] Setup complete. Entering main loop.
+========================
+HAND SENSOR
+Accel Mag : 0.872 g
+Gyro Mag  : 27.154 °/s
+Raw Accel -> X: 0.232  Y: 0.561  Z: 0.626
+Raw Gyro  -> X: 26.198  Y: -1.748  Z: -6.924
+---
+LEG SENSOR
+Accel Mag : 0.831 g
+Gyro Mag  : 65.495 °/s
+Raw Accel -> X: -0.783  Y: -0.258  Z: 0.101
+Raw Gyro  -> X: 2.198  Y: -35.076  Z: -55.267
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.971 g
+Gyro Mag  : 23.306 °/s
+Raw Accel -> X: 0.172  Y: 0.602  Z: 0.742
+Raw Gyro  -> X: 21.389  Y: -1.962  Z: -9.046
+---
+LEG SENSOR
+Accel Mag : 1.150 g
+Gyro Mag  : 150.791 °/s
+Raw Accel -> X: -1.144  Y: 0.018  Z: 0.118
+Raw Gyro  -> X: -46.160  Y: -69.809  Z: -125.435
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.976 g
+Gyro Mag  : 18.210 °/s
+Raw Accel -> X: 0.179  Y: 0.622  Z: 0.731
+Raw Gyro  -> X: 16.260  Y: 6.847  Z: 4.511
+---
+LEG SENSOR
+Accel Mag : 1.037 g
+Gyro Mag  : 135.534 °/s
+Raw Accel -> X: -0.987  Y: 0.316  Z: 0.029
+Raw Gyro  -> X: -57.672  Y: -65.298  Z: -103.824
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.949 g
+Gyro Mag  : 3.406 °/s
+Raw Accel -> X: 0.156  Y: 0.633  Z: 0.689
+Raw Gyro  -> X: 2.847  Y: 1.275  Z: 1.366
+---
+LEG SENSOR
+Accel Mag : 1.046 g
+Gyro Mag  : 49.789 °/s
+Raw Accel -> X: -0.788  Y: 0.683  Z: -0.085
+Raw Gyro  -> X: -15.366  Y: -32.260  Z: -34.672
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.031 g
+Gyro Mag  : 18.310 °/s
+Raw Accel -> X: 0.283  Y: 0.713  Z: 0.688
+Raw Gyro  -> X: 1.733  Y: -5.771  Z: 17.290
+---
+LEG SENSOR
+Accel Mag : 1.065 g
+Gyro Mag  : 118.836 °/s
+Raw Accel -> X: -0.927  Y: 0.502  Z: -0.155
+Raw Gyro  -> X: -30.611  Y: 41.053  Z: 107.237
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.281 g
+Gyro Mag  : 44.914 °/s
+Raw Accel -> X: 0.472  Y: 0.900  Z: 0.779
+Raw Gyro  -> X: 24.229  Y: -32.840  Z: 18.756
+---
+LEG SENSOR
+Accel Mag : 1.008 g
+Gyro Mag  : 67.373 °/s
+Raw Accel -> X: -0.926  Y: 0.389  Z: 0.084
+Raw Gyro  -> X: 16.191  Y: 1.809  Z: 65.374
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.888 g
+Gyro Mag  : 38.858 °/s
+Raw Accel -> X: 0.330  Y: 0.641  Z: 0.519
+Raw Gyro  -> X: -9.580  Y: -18.992  Z: 32.519
+---
+LEG SENSOR
+Accel Mag : 0.962 g
+Gyro Mag  : 54.958 °/s
+Raw Accel -> X: -0.943  Y: 0.172  Z: 0.080
+Raw Gyro  -> X: 22.389  Y: 2.763  Z: 50.115
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.028 g
+Gyro Mag  : 17.789 °/s
+Raw Accel -> X: 0.440  Y: 0.741  Z: 0.560
+Raw Gyro  -> X: 12.466  Y: -11.511  Z: 5.344
+---
+LEG SENSOR
+Accel Mag : 0.964 g
+Gyro Mag  : 56.223 °/s
+Raw Accel -> X: -0.935  Y: 0.230  Z: 0.057
+Raw Gyro  -> X: 17.534  Y: 20.466  Z: 49.344
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.945 g
+Gyro Mag  : 20.220 °/s
+Raw Accel -> X: 0.433  Y: 0.671  Z: 0.505
+Raw Gyro  -> X: 18.496  Y: -7.420  Z: 3.420
+---
+LEG SENSOR
+Accel Mag : 0.968 g
+Gyro Mag  : 60.519 °/s
+Raw Accel -> X: -0.922  Y: 0.292  Z: 0.048
+Raw Gyro  -> X: 24.595  Y: 28.084  Z: 47.634
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.082 g
+Gyro Mag  : 26.320 °/s
+Raw Accel -> X: 0.510  Y: 0.749  Z: 0.592
+Raw Gyro  -> X: 15.458  Y: -19.908  Z: -7.580
+---
+LEG SENSOR
+Accel Mag : 1.016 g
+Gyro Mag  : 56.572 °/s
+Raw Accel -> X: -0.936  Y: 0.395  Z: -0.014
+Raw Gyro  -> X: 31.718  Y: 25.069  Z: 39.573
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.102 g
+Gyro Mag  : 14.310 °/s
+Raw Accel -> X: 0.507  Y: 0.787  Z: 0.581
+Raw Gyro  -> X: -5.023  Y: -4.656  Z: -12.565
+---
+LEG SENSOR
+Accel Mag : 1.311 g
+Gyro Mag  : 115.568 °/s
+Raw Accel -> X: -1.269  Y: 0.317  Z: 0.086
+Raw Gyro  -> X: 60.824  Y: 57.595  Z: 79.618
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.154 g
+Gyro Mag  : 48.245 °/s
+Raw Accel -> X: 0.519  Y: 0.703  Z: 0.754
+Raw Gyro  -> X: -25.878  Y: -36.145  Z: -18.748
+---
+LEG SENSOR
+Accel Mag : 1.238 g
+Gyro Mag  : 159.812 °/s
+Raw Accel -> X: -1.191  Y: -0.119  Z: 0.317
+Raw Gyro  -> X: 68.496  Y: 41.649  Z: 138.252
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.037 g
+Gyro Mag  : 47.168 °/s
+Raw Accel -> X: 0.347  Y: 0.844  Z: 0.493
+Raw Gyro  -> X: -31.298  Y: 31.336  Z: 16.229
+---
+LEG SENSOR
+Accel Mag : 0.286 g
+Gyro Mag  : 66.648 °/s
+Raw Accel -> X: -0.282  Y: -0.025  Z: 0.037
+Raw Gyro  -> X: 61.924  Y: -23.298  Z: -8.038
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.969 g
+Gyro Mag  : 32.502 °/s
+Raw Accel -> X: 0.353  Y: 0.710  Z: 0.556
+Raw Gyro  -> X: -27.687  Y: 6.962  Z: 15.534
+---
+LEG SENSOR
+Accel Mag : 0.610 g
+Gyro Mag  : 204.573 °/s
+Raw Accel -> X: -0.553  Y: -0.219  Z: -0.136
+Raw Gyro  -> X: -36.695  Y: -113.542  Z: -166.168
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.840 g
+Gyro Mag  : 29.395 °/s
+Raw Accel -> X: 0.378  Y: 0.532  Z: 0.529
+Raw Gyro  -> X: -27.443  Y: -10.511  Z: -0.702
+---
+LEG SENSOR
+Accel Mag : 1.676 g
+Gyro Mag  : 289.756 °/s
+Raw Accel -> X: -1.601  Y: 0.490  Z: -0.070
+Raw Gyro  -> X: -73.511  Y: -126.435  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.017 g
+Gyro Mag  : 6.458 °/s
+Raw Accel -> X: 0.437  Y: 0.580  Z: 0.712
+Raw Gyro  -> X: -0.298  Y: -3.046  Z: 5.687
+---
+LEG SENSOR
+Accel Mag : 2.285 g
+Gyro Mag  : 172.915 °/s
+Raw Accel -> X: -1.005  Y: 2.000  Z: -0.457
+Raw Gyro  -> X: 35.618  Y: -114.824  Z: -124.282
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.068 g
+Gyro Mag  : 18.243 °/s
+Raw Accel -> X: 0.497  Y: 0.656  Z: 0.680
+Raw Gyro  -> X: 12.924  Y: -2.015  Z: 12.718
+---
+LEG SENSOR
+Accel Mag : 1.509 g
+Gyro Mag  : 104.271 °/s
+Raw Accel -> X: -1.094  Y: 1.024  Z: 0.177
+Raw Gyro  -> X: -40.176  Y: -4.344  Z: 96.122
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.132 g
+Gyro Mag  : 25.998 °/s
+Raw Accel -> X: 0.550  Y: 0.707  Z: 0.692
+Raw Gyro  -> X: 23.069  Y: 9.321  Z: -7.542
+---
+LEG SENSOR
+Accel Mag : 0.853 g
+Gyro Mag  : 92.488 °/s
+Raw Accel -> X: -0.805  Y: 0.157  Z: 0.235
+Raw Gyro  -> X: 65.557  Y: 15.649  Z: 63.336
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.018 g
+Gyro Mag  : 42.848 °/s
+Raw Accel -> X: 0.495  Y: 0.760  Z: 0.464
+Raw Gyro  -> X: 32.916  Y: 26.679  Z: 6.382
+---
+LEG SENSOR
+Accel Mag : 0.960 g
+Gyro Mag  : 63.699 °/s
+Raw Accel -> X: -0.920  Y: 0.262  Z: 0.079
+Raw Gyro  -> X: 9.908  Y: 26.473  Z: 57.084
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.919 g
+Gyro Mag  : 18.704 °/s
+Raw Accel -> X: 0.497  Y: 0.655  Z: 0.409
+Raw Gyro  -> X: 16.679  Y: 6.519  Z: -5.397
+---
+LEG SENSOR
+Accel Mag : 0.946 g
+Gyro Mag  : 50.295 °/s
+Raw Accel -> X: -0.888  Y: 0.324  Z: 0.029
+Raw Gyro  -> X: 22.237  Y: 13.786  Z: 42.954
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.966 g
+Gyro Mag  : 19.055 °/s
+Raw Accel -> X: 0.506  Y: 0.670  Z: 0.478
+Raw Gyro  -> X: 16.168  Y: -8.916  Z: -4.710
+---
+LEG SENSOR
+Accel Mag : 1.015 g
+Gyro Mag  : 50.905 °/s
+Raw Accel -> X: -0.936  Y: 0.393  Z: -0.001
+Raw Gyro  -> X: 21.267  Y: 19.198  Z: 42.076
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.144 g
+Gyro Mag  : 19.335 °/s
+Raw Accel -> X: 0.516  Y: 0.838  Z: 0.584
+Raw Gyro  -> X: 14.588  Y: -2.168  Z: -12.504
+---
+LEG SENSOR
+Accel Mag : 1.138 g
+Gyro Mag  : 97.749 °/s
+Raw Accel -> X: -1.045  Y: 0.428  Z: 0.139
+Raw Gyro  -> X: 6.542  Y: 58.733  Z: 77.863
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.256 g
+Gyro Mag  : 34.222 °/s
+Raw Accel -> X: 0.547  Y: 0.884  Z: 0.705
+Raw Gyro  -> X: -5.672  Y: -23.580  Z: -24.145
+---
+LEG SENSOR
+Accel Mag : 1.693 g
+Gyro Mag  : 184.823 °/s
+Raw Accel -> X: -1.640  Y: -0.112  Z: 0.405
+Raw Gyro  -> X: 130.015  Y: 39.832  Z: 125.176
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.063 g
+Gyro Mag  : 39.912 °/s
+Raw Accel -> X: 0.394  Y: 0.842  Z: 0.516
+Raw Gyro  -> X: -38.618  Y: 9.160  Z: 4.206
+---
+LEG SENSOR
+Accel Mag : 0.512 g
+Gyro Mag  : 90.417 °/s
+Raw Accel -> X: -0.497  Y: 0.107  Z: 0.062
+Raw Gyro  -> X: 75.031  Y: 2.237  Z: 50.405
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.948 g
+Gyro Mag  : 26.037 °/s
+Raw Accel -> X: 0.377  Y: 0.705  Z: 0.510
+Raw Gyro  -> X: -25.321  Y: -2.046  Z: 5.710
+---
+LEG SENSOR
+Accel Mag : 0.401 g
+Gyro Mag  : 155.246 °/s
+Raw Accel -> X: -0.333  Y: -0.206  Z: -0.086
+Raw Gyro  -> X: -49.000  Y: -78.687  Z: -124.534
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.809 g
+Gyro Mag  : 11.679 °/s
+Raw Accel -> X: 0.313  Y: 0.582  Z: 0.468
+Raw Gyro  -> X: -10.092  Y: 4.634  Z: 3.618
+---
+LEG SENSOR
+Accel Mag : 1.158 g
+Gyro Mag  : 293.780 °/s
+Raw Accel -> X: -1.125  Y: 0.271  Z: 0.019
+Raw Gyro  -> X: -77.489  Y: -133.168  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.851 g
+Gyro Mag  : 3.938 °/s
+Raw Accel -> X: 0.392  Y: 0.567  Z: 0.499
+Raw Gyro  -> X: -0.779  Y: -1.191  Z: 3.672
+---
+LEG SENSOR
+Accel Mag : 2.453 g
+Gyro Mag  : 221.035 °/s
+Raw Accel -> X: -1.507  Y: 1.935  Z: 0.052
+Raw Gyro  -> X: -73.794  Y: -126.557  Z: -165.511
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.153 g
+Gyro Mag  : 21.930 °/s
+Raw Accel -> X: 0.531  Y: 0.743  Z: 0.705
+Raw Gyro  -> X: 16.771  Y: -6.695  Z: 12.443
+---
+LEG SENSOR
+Accel Mag : 1.848 g
+Gyro Mag  : 164.645 °/s
+Raw Accel -> X: -1.536  Y: -0.997  Z: 0.250
+Raw Gyro  -> X: -140.374  Y: 40.595  Z: 75.863
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.199 g
+Gyro Mag  : 14.987 °/s
+Raw Accel -> X: 0.603  Y: 0.814  Z: 0.642
+Raw Gyro  -> X: 14.557  Y: -1.718  Z: 3.122
+---
+LEG SENSOR
+Accel Mag : 0.899 g
+Gyro Mag  : 83.923 °/s
+Raw Accel -> X: -0.829  Y: 0.241  Z: 0.249
+Raw Gyro  -> X: 64.191  Y: 2.221  Z: 54.015
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.973 g
+Gyro Mag  : 21.426 °/s
+Raw Accel -> X: 0.514  Y: 0.721  Z: 0.403
+Raw Gyro  -> X: 2.115  Y: 20.679  Z: 5.191
+---
+LEG SENSOR
+Accel Mag : 0.916 g
+Gyro Mag  : 53.791 °/s
+Raw Accel -> X: -0.881  Y: 0.189  Z: 0.163
+Raw Gyro  -> X: 34.458  Y: 8.099  Z: 40.504
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.855 g
+Gyro Mag  : 8.866 °/s
+Raw Accel -> X: 0.458  Y: 0.605  Z: 0.395
+Raw Gyro  -> X: 5.771  Y: -6.389  Z: 2.115
+---
+LEG SENSOR
+Accel Mag : 0.922 g
+Gyro Mag  : 45.333 °/s
+Raw Accel -> X: -0.865  Y: 0.294  Z: 0.124
+Raw Gyro  -> X: 24.962  Y: 11.519  Z: 36.046
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.979 g
+Gyro Mag  : 19.316 °/s
+Raw Accel -> X: 0.570  Y: 0.614  Z: 0.507
+Raw Gyro  -> X: 13.405  Y: -10.885  Z: -8.656
+---
+LEG SENSOR
+Accel Mag : 1.031 g
+Gyro Mag  : 56.454 °/s
+Raw Accel -> X: -0.957  Y: 0.379  Z: 0.072
+Raw Gyro  -> X: 22.939  Y: 24.137  Z: 45.588
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.153 g
+Gyro Mag  : 15.251 °/s
+Raw Accel -> X: 0.631  Y: 0.752  Z: 0.604
+Raw Gyro  -> X: -7.985  Y: -1.107  Z: -12.947
+---
+LEG SENSOR
+Accel Mag : 1.121 g
+Gyro Mag  : 124.336 °/s
+Raw Accel -> X: -1.052  Y: 0.364  Z: 0.135
+Raw Gyro  -> X: 35.137  Y: 78.733  Z: 89.588
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.191 g
+Gyro Mag  : 32.295 °/s
+Raw Accel -> X: 0.578  Y: 0.771  Z: 0.700
+Raw Gyro  -> X: -25.786  Y: -16.679  Z: -9.992
+---
+LEG SENSOR
+Accel Mag : 1.532 g
+Gyro Mag  : 177.264 °/s
+Raw Accel -> X: -1.478  Y: -0.069  Z: 0.397
+Raw Gyro  -> X: 87.191  Y: 52.725  Z: 145.053
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.036 g
+Gyro Mag  : 47.295 °/s
+Raw Accel -> X: 0.437  Y: 0.840  Z: 0.421
+Raw Gyro  -> X: -37.985  Y: 26.069  Z: 10.695
+---
+LEG SENSOR
+Accel Mag : 0.358 g
+Gyro Mag  : 52.159 °/s
+Raw Accel -> X: -0.358  Y: -0.007  Z: 0.010
+Raw Gyro  -> X: 46.382  Y: 11.672  Z: 20.809
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.924 g
+Gyro Mag  : 32.914 °/s
+Raw Accel -> X: 0.393  Y: 0.666  Z: 0.506
+Raw Gyro  -> X: -27.939  Y: 5.511  Z: 16.504
+---
+LEG SENSOR
+Accel Mag : 0.340 g
+Gyro Mag  : 174.637 °/s
+Raw Accel -> X: -0.317  Y: -0.114  Z: -0.050
+Raw Gyro  -> X: -47.427  Y: -72.641  Z: -151.565
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.811 g
+Gyro Mag  : 16.613 °/s
+Raw Accel -> X: 0.345  Y: 0.592  Z: 0.434
+Raw Gyro  -> X: -15.802  Y: -0.389  Z: 5.115
+---
+LEG SENSOR
+Accel Mag : 1.467 g
+Gyro Mag  : 285.365 °/s
+Raw Accel -> X: -1.390  Y: 0.471  Z: 0.018
+Raw Gyro  -> X: -51.344  Y: -127.389  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.914 g
+Gyro Mag  : 28.312 °/s
+Raw Accel -> X: 0.398  Y: 0.583  Z: 0.580
+Raw Gyro  -> X: -6.069  Y: -22.092  Z: 16.634
+---
+LEG SENSOR
+Accel Mag : 2.208 g
+Gyro Mag  : 176.948 °/s
+Raw Accel -> X: -1.304  Y: 1.747  Z: -0.350
+Raw Gyro  -> X: -93.221  Y: -86.084  Z: -123.328
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.080 g
+Gyro Mag  : 21.825 °/s
+Raw Accel -> X: 0.574  Y: 0.683  Z: 0.608
+Raw Gyro  -> X: 16.168  Y: -12.076  Z: 8.313
+---
+LEG SENSOR
+Accel Mag : 1.685 g
+Gyro Mag  : 97.788 °/s
+Raw Accel -> X: -1.067  Y: 1.271  Z: -0.289
+Raw Gyro  -> X: -14.008  Y: 4.573  Z: 96.672
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.163 g
+Gyro Mag  : 16.301 °/s
+Raw Accel -> X: 0.641  Y: 0.654  Z: 0.717
+Raw Gyro  -> X: 15.183  Y: -5.290  Z: -2.687
+---
+LEG SENSOR
+Accel Mag : 0.826 g
+Gyro Mag  : 65.040 °/s
+Raw Accel -> X: -0.796  Y: 0.158  Z: 0.157
+Raw Gyro  -> X: 40.580  Y: -2.405  Z: 50.771
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.124 g
+Gyro Mag  : 40.955 °/s
+Raw Accel -> X: 0.622  Y: 0.770  Z: 0.533
+Raw Gyro  -> X: 35.107  Y: 20.985  Z: -2.115
+---
+LEG SENSOR
+Accel Mag : 0.976 g
+Gyro Mag  : 47.420 °/s
+Raw Accel -> X: -0.941  Y: 0.207  Z: 0.158
+Raw Gyro  -> X: 23.939  Y: 10.611  Z: 39.534
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.889 g
+Gyro Mag  : 18.326 °/s
+Raw Accel -> X: 0.494  Y: 0.600  Z: 0.433
+Raw Gyro  -> X: 13.382  Y: 12.473  Z: 1.092
+---
+LEG SENSOR
+Accel Mag : 0.908 g
+Gyro Mag  : 57.993 °/s
+Raw Accel -> X: -0.861  Y: 0.280  Z: 0.072
+Raw Gyro  -> X: 23.626  Y: 20.595  Z: 48.794
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.935 g
+Gyro Mag  : 16.308 °/s
+Raw Accel -> X: 0.535  Y: 0.627  Z: 0.440
+Raw Gyro  -> X: 9.573  Y: 5.573  Z: -11.969
+---
+LEG SENSOR
+Accel Mag : 1.005 g
+Gyro Mag  : 48.430 °/s
+Raw Accel -> X: -0.935  Y: 0.367  Z: 0.045
+Raw Gyro  -> X: 18.366  Y: 24.817  Z: 37.313
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.109 g
+Gyro Mag  : 25.536 °/s
+Raw Accel -> X: 0.634  Y: 0.724  Z: 0.552
+Raw Gyro  -> X: -10.977  Y: 0.336  Z: -23.053
+---
+LEG SENSOR
+Accel Mag : 1.158 g
+Gyro Mag  : 86.436 °/s
+Raw Accel -> X: -1.112  Y: 0.308  Z: -0.100
+Raw Gyro  -> X: 22.595  Y: 53.053  Z: 64.389
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.201 g
+Gyro Mag  : 43.117 °/s
+Raw Accel -> X: 0.618  Y: 0.813  Z: 0.632
+Raw Gyro  -> X: -21.420  Y: -30.397  Z: -21.824
+---
+LEG SENSOR
+Accel Mag : 1.822 g
+Gyro Mag  : 172.281 °/s
+Raw Accel -> X: -1.805  Y: 0.201  Z: 0.150
+Raw Gyro  -> X: 112.061  Y: 68.817  Z: 111.298
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.965 g
+Gyro Mag  : 40.061 °/s
+Raw Accel -> X: 0.390  Y: 0.656  Z: 0.591
+Raw Gyro  -> X: -38.794  Y: 8.023  Z: 5.962
+---
+LEG SENSOR
+Accel Mag : 0.643 g
+Gyro Mag  : 74.180 °/s
+Raw Accel -> X: -0.542  Y: 0.167  Z: 0.303
+Raw Gyro  -> X: 38.763  Y: 25.466  Z: 57.893
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.106 g
+Gyro Mag  : 21.838 °/s
+Raw Accel -> X: 0.521  Y: 0.757  Z: 0.616
+Raw Gyro  -> X: -15.580  Y: 8.359  Z: 12.817
+---
+LEG SENSOR
+Accel Mag : 0.381 g
+Gyro Mag  : 148.099 °/s
+Raw Accel -> X: -0.325  Y: -0.198  Z: 0.009
+Raw Gyro  -> X: 0.000  Y: -74.977  Z: -127.718
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.787 g
+Gyro Mag  : 33.456 °/s
+Raw Accel -> X: 0.350  Y: 0.531  Z: 0.464
+Raw Gyro  -> X: -19.603  Y: -13.954  Z: 23.244
+---
+LEG SENSOR
+Accel Mag : 1.269 g
+Gyro Mag  : 283.566 °/s
+Raw Accel -> X: -1.235  Y: 0.271  Z: -0.107
+Raw Gyro  -> X: -104.771  Y: -129.557  Z: -229.450
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.895 g
+Gyro Mag  : 13.212 °/s
+Raw Accel -> X: 0.439  Y: 0.477  Z: 0.617
+Raw Gyro  -> X: -0.931  Y: -10.733  Z: 7.649
+---
+LEG SENSOR
+Accel Mag : 2.198 g
+Gyro Mag  : 223.876 °/s
+Raw Accel -> X: -1.486  Y: 1.595  Z: 0.279
+Raw Gyro  -> X: -72.573  Y: -109.374  Z: -181.359
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.151 g
+Gyro Mag  : 13.148 °/s
+Raw Accel -> X: 0.574  Y: 0.650  Z: 0.756
+Raw Gyro  -> X: 11.382  Y: 1.191  Z: 6.473
+---
+LEG SENSOR
+Accel Mag : 1.662 g
+Gyro Mag  : 145.794 °/s
+Raw Accel -> X: -1.374  Y: -0.935  Z: -0.039
+Raw Gyro  -> X: -85.664  Y: 41.328  Z: 110.496
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.269 g
+Gyro Mag  : 52.940 °/s
+Raw Accel -> X: 0.583  Y: 0.833  Z: 0.761
+Raw Gyro  -> X: 41.893  Y: 31.000  Z: -9.305
+---
+LEG SENSOR
+Accel Mag : 0.876 g
+Gyro Mag  : 79.508 °/s
+Raw Accel -> X: -0.718  Y: 0.183  Z: 0.467
+Raw Gyro  -> X: 26.298  Y: 10.802  Z: 74.252
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.026 g
+Gyro Mag  : 56.654 °/s
+Raw Accel -> X: 0.508  Y: 0.748  Z: 0.485
+Raw Gyro  -> X: 31.260  Y: 46.046  Z: 10.595
+---
+LEG SENSOR
+Accel Mag : 0.940 g
+Gyro Mag  : 50.372 °/s
+Raw Accel -> X: -0.888  Y: 0.260  Z: 0.161
+Raw Gyro  -> X: 22.000  Y: 8.366  Z: 44.534
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.886 g
+Gyro Mag  : 10.108 °/s
+Raw Accel -> X: 0.503  Y: 0.611  Z: 0.398
+Raw Gyro  -> X: 9.939  Y: 0.931  Z: 1.588
+---
+LEG SENSOR
+Accel Mag : 0.952 g
+Gyro Mag  : 51.200 °/s
+Raw Accel -> X: -0.904  Y: 0.284  Z: 0.087
+Raw Gyro  -> X: 41.122  Y: 3.718  Z: 30.275
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.925 g
+Gyro Mag  : 24.173 °/s
+Raw Accel -> X: 0.534  Y: 0.582  Z: 0.481
+Raw Gyro  -> X: 10.496  Y: -16.924  Z: -13.702
+---
+LEG SENSOR
+Accel Mag : 0.951 g
+Gyro Mag  : 57.414 °/s
+Raw Accel -> X: -0.898  Y: 0.301  Z: 0.088
+Raw Gyro  -> X: 34.641  Y: 20.969  Z: 40.702
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.099 g
+Gyro Mag  : 16.406 °/s
+Raw Accel -> X: 0.555  Y: 0.690  Z: 0.650
+Raw Gyro  -> X: 6.374  Y: -9.427  Z: -11.817
+---
+LEG SENSOR
+Accel Mag : 1.095 g
+Gyro Mag  : 83.247 °/s
+Raw Accel -> X: -1.038  Y: 0.308  Z: -0.161
+Raw Gyro  -> X: 27.168  Y: 40.336  Z: 67.565
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.308 g
+Gyro Mag  : 42.449 °/s
+Raw Accel -> X: 0.627  Y: 0.885  Z: 0.731
+Raw Gyro  -> X: -15.840  Y: -28.359  Z: -27.328
+---
+LEG SENSOR
+Accel Mag : 1.764 g
+Gyro Mag  : 168.161 °/s
+Raw Accel -> X: -1.723  Y: 0.285  Z: 0.246
+Raw Gyro  -> X: 100.809  Y: 60.183  Z: 120.389
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.961 g
+Gyro Mag  : 53.887 °/s
+Raw Accel -> X: 0.438  Y: 0.659  Z: 0.546
+Raw Gyro  -> X: -47.992  Y: -0.359  Z: 24.504
+---
+LEG SENSOR
+Accel Mag : 0.940 g
+Gyro Mag  : 116.992 °/s
+Raw Accel -> X: -0.801  Y: 0.465  Z: 0.158
+Raw Gyro  -> X: 23.221  Y: 41.298  Z: 106.969
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.964 g
+Gyro Mag  : 30.797 °/s
+Raw Accel -> X: 0.495  Y: 0.677  Z: 0.474
+Raw Gyro  -> X: -24.237  Y: 9.198  Z: 16.626
+---
+LEG SENSOR
+Accel Mag : 0.337 g
+Gyro Mag  : 113.601 °/s
+Raw Accel -> X: -0.276  Y: -0.172  Z: 0.090
+Raw Gyro  -> X: -25.328  Y: -41.855  Z: -102.527
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.788 g
+Gyro Mag  : 26.915 °/s
+Raw Accel -> X: 0.438  Y: 0.482  Z: 0.445
+Raw Gyro  -> X: -20.580  Y: -6.931  Z: 15.901
+---
+LEG SENSOR
+Accel Mag : 0.962 g
+Gyro Mag  : 277.584 °/s
+Raw Accel -> X: -0.958  Y: 0.064  Z: 0.047
+Raw Gyro  -> X: -49.015  Y: -109.916  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.857 g
+Gyro Mag  : 19.409 °/s
+Raw Accel -> X: 0.410  Y: 0.525  Z: 0.540
+Raw Gyro  -> X: 13.725  Y: 7.267  Z: -11.641
+---
+LEG SENSOR
+Accel Mag : 2.585 g
+Gyro Mag  : 287.378 °/s
+Raw Accel -> X: -1.983  Y: 1.656  Z: 0.065
+Raw Gyro  -> X: -124.710  Y: -117.275  Z: -230.824
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.161 g
+Gyro Mag  : 30.985 °/s
+Raw Accel -> X: 0.595  Y: 0.689  Z: 0.721
+Raw Gyro  -> X: 29.489  Y: 9.130  Z: -2.672
+---
+LEG SENSOR
+Accel Mag : 2.846 g
+Gyro Mag  : 151.691 °/s
+Raw Accel -> X: -1.860  Y: -2.000  Z: 0.799
+Raw Gyro  -> X: -131.084  Y: 44.901  Z: 61.733
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.250 g
+Gyro Mag  : 53.522 °/s
+Raw Accel -> X: 0.741  Y: 0.662  Z: 0.759
+Raw Gyro  -> X: -0.366  Y: -52.832  Z: 8.557
+---
+LEG SENSOR
+Accel Mag : 0.794 g
+Gyro Mag  : 87.052 °/s
+Raw Accel -> X: -0.751  Y: 0.105  Z: 0.235
+Raw Gyro  -> X: 48.366  Y: 6.008  Z: 72.130
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.879 g
+Gyro Mag  : 15.791 °/s
+Raw Accel -> X: 0.541  Y: 0.592  Z: 0.361
+Raw Gyro  -> X: -1.305  Y: 9.099  Z: -12.840
+---
+LEG SENSOR
+Accel Mag : 0.977 g
+Gyro Mag  : 54.866 °/s
+Raw Accel -> X: -0.945  Y: 0.219  Z: 0.112
+Raw Gyro  -> X: 26.527  Y: 8.336  Z: 47.298
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.022 g
+Gyro Mag  : 34.586 °/s
+Raw Accel -> X: 0.684  Y: 0.575  Z: 0.497
+Raw Gyro  -> X: 20.405  Y: 27.672  Z: -3.756
+---
+LEG SENSOR
+Accel Mag : 0.931 g
+Gyro Mag  : 51.108 °/s
+Raw Accel -> X: -0.870  Y: 0.326  Z: 0.064
+Raw Gyro  -> X: 25.878  Y: 14.458  Z: 41.634
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.906 g
+Gyro Mag  : 23.064 °/s
+Raw Accel -> X: 0.500  Y: 0.609  Z: 0.448
+Raw Gyro  -> X: 17.763  Y: 12.855  Z: -7.153
+---
+LEG SENSOR
+Accel Mag : 1.013 g
+Gyro Mag  : 42.911 °/s
+Raw Accel -> X: -0.934  Y: 0.391  Z: 0.031
+Raw Gyro  -> X: 18.763  Y: 16.405  Z: 34.931
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.063 g
+Gyro Mag  : 13.697 °/s
+Raw Accel -> X: 0.602  Y: 0.702  Z: 0.525
+Raw Gyro  -> X: 1.969  Y: -0.977  Z: -13.519
+---
+LEG SENSOR
+Accel Mag : 1.193 g
+Gyro Mag  : 91.822 °/s
+Raw Accel -> X: -1.133  Y: 0.362  Z: -0.084
+Raw Gyro  -> X: 34.679  Y: 45.664  Z: 71.718
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.262 g
+Gyro Mag  : 35.487 °/s
+Raw Accel -> X: 0.625  Y: 0.853  Z: 0.688
+Raw Gyro  -> X: -3.908  Y: -18.611  Z: -29.962
+---
+LEG SENSOR
+Accel Mag : 1.734 g
+Gyro Mag  : 183.847 °/s
+Raw Accel -> X: -1.721  Y: 0.098  Z: 0.190
+Raw Gyro  -> X: 133.046  Y: 55.038  Z: 114.321
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.085 g
+Gyro Mag  : 35.133 °/s
+Raw Accel -> X: 0.448  Y: 0.776  Z: 0.612
+Raw Gyro  -> X: -33.031  Y: 10.214  Z: 6.244
+---
+LEG SENSOR
+Accel Mag : 0.679 g
+Gyro Mag  : 94.746 °/s
+Raw Accel -> X: -0.604  Y: 0.237  Z: 0.201
+Raw Gyro  -> X: 23.130  Y: 35.962  Z: 84.550
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.973 g
+Gyro Mag  : 34.325 °/s
+Raw Accel -> X: 0.449  Y: 0.680  Z: 0.532
+Raw Gyro  -> X: -22.870  Y: 15.809  Z: 20.130
+---
+LEG SENSOR
+Accel Mag : 0.260 g
+Gyro Mag  : 142.100 °/s
+Raw Accel -> X: -0.233  Y: -0.114  Z: 0.011
+Raw Gyro  -> X: -16.176  Y: -59.588  Z: -127.985
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.728 g
+Gyro Mag  : 18.435 °/s
+Raw Accel -> X: 0.315  Y: 0.459  Z: 0.469
+Raw Gyro  -> X: -12.542  Y: 9.160  Z: 9.931
+---
+LEG SENSOR
+Accel Mag : 1.126 g
+Gyro Mag  : 292.581 °/s
+Raw Accel -> X: -1.104  Y: 0.216  Z: 0.058
+Raw Gyro  -> X: -76.221  Y: -131.244  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.919 g
+Gyro Mag  : 15.950 °/s
+Raw Accel -> X: 0.410  Y: 0.545  Z: 0.615
+Raw Gyro  -> X: 8.511  Y: -11.649  Z: 6.802
+---
+LEG SENSOR
+Accel Mag : 2.420 g
+Gyro Mag  : 230.702 °/s
+Raw Accel -> X: -1.818  Y: 1.597  Z: -0.020
+Raw Gyro  -> X: -64.435  Y: -128.916  Z: -180.145
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.160 g
+Gyro Mag  : 14.253 °/s
+Raw Accel -> X: 0.578  Y: 0.683  Z: 0.738
+Raw Gyro  -> X: 6.824  Y: -5.908  Z: 11.031
+---
+LEG SENSOR
+Accel Mag : 2.163 g
+Gyro Mag  : 141.807 °/s
+Raw Accel -> X: -1.566  Y: -1.386  Z: 0.549
+Raw Gyro  -> X: -119.733  Y: 38.412  Z: 65.557
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.111 g
+Gyro Mag  : 7.587 °/s
+Raw Accel -> X: 0.595  Y: 0.629  Z: 0.696
+Raw Gyro  -> X: -2.763  Y: 6.618  Z: -2.473
+---
+LEG SENSOR
+Accel Mag : 0.886 g
+Gyro Mag  : 76.954 °/s
+Raw Accel -> X: -0.794  Y: 0.259  Z: 0.294
+Raw Gyro  -> X: 54.779  Y: 6.977  Z: 53.595
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.066 g
+Gyro Mag  : 42.315 °/s
+Raw Accel -> X: 0.583  Y: 0.726  Z: 0.520
+Raw Gyro  -> X: 32.473  Y: 27.092  Z: -1.443
+---
+LEG SENSOR
+Accel Mag : 0.936 g
+Gyro Mag  : 56.218 °/s
+Raw Accel -> X: -0.887  Y: 0.243  Z: 0.174
+Raw Gyro  -> X: 39.908  Y: 14.550  Z: 36.824
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.880 g
+Gyro Mag  : 36.072 °/s
+Raw Accel -> X: 0.443  Y: 0.624  Z: 0.435
+Raw Gyro  -> X: 34.115  Y: 11.687  Z: -0.908
+---
+LEG SENSOR
+Accel Mag : 0.921 g
+Gyro Mag  : 63.843 °/s
+Raw Accel -> X: -0.869  Y: 0.300  Z: 0.054
+Raw Gyro  -> X: 26.160  Y: 26.053  Z: 52.084
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.991 g
+Gyro Mag  : 23.678 °/s
+Raw Accel -> X: 0.549  Y: 0.680  Z: 0.467
+Raw Gyro  -> X: 21.168  Y: 1.198  Z: -10.542
+---
+LEG SENSOR
+Accel Mag : 1.040 g
+Gyro Mag  : 67.721 °/s
+Raw Accel -> X: -0.961  Y: 0.393  Z: 0.055
+Raw Gyro  -> X: 22.137  Y: 28.344  Z: 57.382
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.165 g
+Gyro Mag  : 16.301 °/s
+Raw Accel -> X: 0.546  Y: 0.842  Z: 0.592
+Raw Gyro  -> X: -6.931  Y: 1.939  Z: -14.626
+---
+LEG SENSOR
+Accel Mag : 1.648 g
+Gyro Mag  : 156.563 °/s
+Raw Accel -> X: -1.595  Y: 0.412  Z: 0.063
+Raw Gyro  -> X: 74.870  Y: 75.328  Z: 115.031
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.146 g
+Gyro Mag  : 27.570 °/s
+Raw Accel -> X: 0.560  Y: 0.718  Z: 0.696
+Raw Gyro  -> X: -26.771  Y: -0.115  Z: 6.588
+---
+LEG SENSOR
+Accel Mag : 1.005 g
+Gyro Mag  : 261.853 °/s
+Raw Accel -> X: -0.767  Y: 0.582  Z: 0.288
+Raw Gyro  -> X: -141.450  Y: 118.489  Z: 185.794
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.126 g
+Gyro Mag  : 20.093 °/s
+Raw Accel -> X: 0.523  Y: 0.811  Z: 0.579
+Raw Gyro  -> X: -19.145  Y: 0.603  Z: -6.069
+---
+LEG SENSOR
+Accel Mag : 0.246 g
+Gyro Mag  : 165.868 °/s
+Raw Accel -> X: -0.148  Y: -0.193  Z: -0.030
+Raw Gyro  -> X: 113.053  Y: -10.595  Z: -120.908
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.896 g
+Gyro Mag  : 40.222 °/s
+Raw Accel -> X: 0.407  Y: 0.570  Z: 0.559
+Raw Gyro  -> X: -35.076  Y: -1.504  Z: 19.626
+---
+LEG SENSOR
+Accel Mag : 0.812 g
+Gyro Mag  : 259.627 °/s
+Raw Accel -> X: -0.793  Y: 0.093  Z: -0.148
+Raw Gyro  -> X: -117.405  Y: -70.115  Z: -220.695
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.715 g
+Gyro Mag  : 32.480 °/s
+Raw Accel -> X: 0.339  Y: 0.414  Z: 0.475
+Raw Gyro  -> X: -30.450  Y: 4.168  Z: 10.504
+---
+LEG SENSOR
+Accel Mag : 1.892 g
+Gyro Mag  : 291.958 °/s
+Raw Accel -> X: -1.455  Y: 1.161  Z: 0.339
+Raw Gyro  -> X: -91.901  Y: -137.573  Z: -240.557
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.069 g
+Gyro Mag  : 20.154 °/s
+Raw Accel -> X: 0.435  Y: 0.717  Z: 0.663
+Raw Gyro  -> X: 17.137  Y: 0.611  Z: -10.588
+---
+LEG SENSOR
+Accel Mag : 1.623 g
+Gyro Mag  : 128.734 °/s
+Raw Accel -> X: -1.052  Y: 0.986  Z: -0.744
+Raw Gyro  -> X: 118.550  Y: -39.015  Z: 31.565
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.247 g
+Gyro Mag  : 26.766 °/s
+Raw Accel -> X: 0.600  Y: 0.865  Z: 0.669
+Raw Gyro  -> X: 1.382  Y: -26.397  Z: 4.206
+---
+LEG SENSOR
+Accel Mag : 1.475 g
+Gyro Mag  : 158.140 °/s
+Raw Accel -> X: -1.391  Y: -0.457  Z: 0.176
+Raw Gyro  -> X: -91.740  Y: -11.382  Z: 128.305
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.037 g
+Gyro Mag  : 48.031 °/s
+Raw Accel -> X: 0.553  Y: 0.673  Z: 0.563
+Raw Gyro  -> X: 37.366  Y: 29.840  Z: 4.504
+---
+LEG SENSOR
+Accel Mag : 1.003 g
+Gyro Mag  : 93.942 °/s
+Raw Accel -> X: -0.998  Y: 0.055  Z: -0.081
+Raw Gyro  -> X: 4.969  Y: 35.580  Z: 86.802
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.915 g
+Gyro Mag  : 34.598 °/s
+Raw Accel -> X: 0.412  Y: 0.629  Z: 0.521
+Raw Gyro  -> X: 29.214  Y: -3.679  Z: 18.168
+---
+LEG SENSOR
+Accel Mag : 0.897 g
+Gyro Mag  : 55.372 °/s
+Raw Accel -> X: -0.860  Y: 0.253  Z: -0.026
+Raw Gyro  -> X: 26.519  Y: 16.641  Z: 45.672
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.914 g
+Gyro Mag  : 17.405 °/s
+Raw Accel -> X: 0.530  Y: 0.589  Z: 0.456
+Raw Gyro  -> X: 14.557  Y: -3.534  Z: -8.863
+---
+LEG SENSOR
+Accel Mag : 1.040 g
+Gyro Mag  : 42.377 °/s
+Raw Accel -> X: -0.998  Y: 0.290  Z: -0.026
+Raw Gyro  -> X: 16.863  Y: 10.573  Z: 37.412
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.069 g
+Gyro Mag  : 43.756 °/s
+Raw Accel -> X: 0.589  Y: 0.670  Z: 0.589
+Raw Gyro  -> X: 16.786  Y: -36.313  Z: -17.725
+---
+LEG SENSOR
+Accel Mag : 1.100 g
+Gyro Mag  : 75.188 °/s
+Raw Accel -> X: -1.004  Y: 0.450  Z: -0.022
+Raw Gyro  -> X: 45.221  Y: 21.534  Z: 56.076
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.301 g
+Gyro Mag  : 66.534 °/s
+Raw Accel -> X: 0.659  Y: 0.975  Z: 0.554
+Raw Gyro  -> X: -46.366  Y: -27.870  Z: -38.733
+---
+LEG SENSOR
+Accel Mag : 1.529 g
+Gyro Mag  : 158.340 °/s
+Raw Accel -> X: -1.419  Y: 0.438  Z: 0.364
+Raw Gyro  -> X: 95.542  Y: 72.550  Z: 103.344
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.016 g
+Gyro Mag  : 69.734 °/s
+Raw Accel -> X: 0.540  Y: 0.573  Z: 0.642
+Raw Gyro  -> X: -51.374  Y: -27.458  Z: 38.336
+---
+LEG SENSOR
+Accel Mag : 1.019 g
+Gyro Mag  : 165.245 °/s
+Raw Accel -> X: -0.809  Y: 0.592  Z: 0.181
+Raw Gyro  -> X: -37.137  Y: 70.595  Z: 144.718
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.121 g
+Gyro Mag  : 40.399 °/s
+Raw Accel -> X: 0.551  Y: 0.806  Z: 0.552
+Raw Gyro  -> X: -23.916  Y: 31.939  Z: 6.328
+---
+LEG SENSOR
+Accel Mag : 0.336 g
+Gyro Mag  : 124.401 °/s
+Raw Accel -> X: -0.308  Y: -0.121  Z: -0.063
+Raw Gyro  -> X: 47.321  Y: -68.664  Z: -92.313
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.725 g
+Gyro Mag  : 38.066 °/s
+Raw Accel -> X: 0.306  Y: 0.548  Z: 0.363
+Raw Gyro  -> X: -18.351  Y: 20.802  Z: 26.069
+---
+LEG SENSOR
+Accel Mag : 0.969 g
+Gyro Mag  : 279.383 °/s
+Raw Accel -> X: -0.959  Y: -0.046  Z: -0.127
+Raw Gyro  -> X: -91.198  Y: -126.023  Z: -232.069
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.809 g
+Gyro Mag  : 26.625 °/s
+Raw Accel -> X: 0.361  Y: 0.529  Z: 0.494
+Raw Gyro  -> X: -6.817  Y: -18.939  Z: 17.427
+---
+LEG SENSOR
+Accel Mag : 2.068 g
+Gyro Mag  : 295.985 °/s
+Raw Accel -> X: -1.651  Y: 1.240  Z: 0.119
+Raw Gyro  -> X: -94.840  Y: -126.664  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.100 g
+Gyro Mag  : 19.476 °/s
+Raw Accel -> X: 0.532  Y: 0.663  Z: 0.699
+Raw Gyro  -> X: 16.641  Y: -5.137  Z: -8.718
+---
+LEG SENSOR
+Accel Mag : 1.600 g
+Gyro Mag  : 165.291 °/s
+Raw Accel -> X: -1.240  Y: -0.885  Z: 0.489
+Raw Gyro  -> X: -100.916  Y: 47.527  Z: 121.977
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.265 g
+Gyro Mag  : 46.118 °/s
+Raw Accel -> X: 0.678  Y: 0.801  Z: 0.707
+Raw Gyro  -> X: 23.282  Y: -17.313  Z: -35.847
+---
+LEG SENSOR
+Accel Mag : 0.745 g
+Gyro Mag  : 72.763 °/s
+Raw Accel -> X: -0.613  Y: 0.212  Z: 0.366
+Raw Gyro  -> X: 38.893  Y: 4.840  Z: 61.305
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.968 g
+Gyro Mag  : 15.265 °/s
+Raw Accel -> X: 0.540  Y: 0.648  Z: 0.475
+Raw Gyro  -> X: 14.053  Y: -5.863  Z: 1.076
+---
+LEG SENSOR
+Accel Mag : 0.941 g
+Gyro Mag  : 54.513 °/s
+Raw Accel -> X: -0.899  Y: 0.195  Z: 0.201
+Raw Gyro  -> X: 36.191  Y: 5.420  Z: 40.405
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.953 g
+Gyro Mag  : 16.714 °/s
+Raw Accel -> X: 0.591  Y: 0.589  Z: 0.460
+Raw Gyro  -> X: 16.298  Y: 1.115  Z: 3.534
+---
+LEG SENSOR
+Accel Mag : 0.943 g
+Gyro Mag  : 68.130 °/s
+Raw Accel -> X: -0.899  Y: 0.263  Z: 0.112
+Raw Gyro  -> X: 26.374  Y: 23.962  Z: 58.069
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.924 g
+Gyro Mag  : 12.583 °/s
+Raw Accel -> X: 0.539  Y: 0.630  Z: 0.408
+Raw Gyro  -> X: 10.511  Y: -0.008  Z: -6.916
+---
+LEG SENSOR
+Accel Mag : 0.961 g
+Gyro Mag  : 60.663 °/s
+Raw Accel -> X: -0.890  Y: 0.363  Z: 0.003
+Raw Gyro  -> X: 16.458  Y: 28.672  Z: 50.863
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.205 g
+Gyro Mag  : 20.235 °/s
+Raw Accel -> X: 0.674  Y: 0.807  Z: 0.590
+Raw Gyro  -> X: -3.672  Y: -8.985  Z: -17.756
+---
+LEG SENSOR
+Accel Mag : 1.206 g
+Gyro Mag  : 100.065 °/s
+Raw Accel -> X: -1.144  Y: 0.376  Z: -0.071
+Raw Gyro  -> X: 20.176  Y: 56.198  Z: 80.298
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.239 g
+Gyro Mag  : 32.862 °/s
+Raw Accel -> X: 0.697  Y: 0.734  Z: 0.716
+Raw Gyro  -> X: -14.420  Y: -20.374  Z: -21.374
+---
+LEG SENSOR
+Accel Mag : 1.861 g
+Gyro Mag  : 184.706 °/s
+Raw Accel -> X: -1.780  Y: -0.161  Z: 0.520
+Raw Gyro  -> X: 100.473  Y: 56.427  Z: 144.351
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.128 g
+Gyro Mag  : 40.709 °/s
+Raw Accel -> X: 0.497  Y: 0.879  Z: 0.504
+Raw Gyro  -> X: -15.611  Y: 31.374  Z: 20.718
+---
+LEG SENSOR
+Accel Mag : 0.402 g
+Gyro Mag  : 70.526 °/s
+Raw Accel -> X: -0.384  Y: -0.021  Z: 0.116
+Raw Gyro  -> X: 68.710  Y: -1.389  Z: 15.840
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.832 g
+Gyro Mag  : 34.312 °/s
+Raw Accel -> X: 0.392  Y: 0.625  Z: 0.384
+Raw Gyro  -> X: -15.160  Y: 23.725  Z: 19.611
+---
+LEG SENSOR
+Accel Mag : 0.413 g
+Gyro Mag  : 189.803 °/s
+Raw Accel -> X: -0.365  Y: -0.192  Z: 0.021
+Raw Gyro  -> X: -42.634  Y: -87.214  Z: -163.099
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.767 g
+Gyro Mag  : 27.831 °/s
+Raw Accel -> X: 0.329  Y: 0.577  Z: 0.384
+Raw Gyro  -> X: -3.244  Y: 22.534  Z: 16.008
+---
+LEG SENSOR
+Accel Mag : 1.647 g
+Gyro Mag  : 300.201 °/s
+Raw Accel -> X: -1.560  Y: 0.517  Z: 0.112
+Raw Gyro  -> X: -102.267  Y: -130.740  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.975 g
+Gyro Mag  : 10.815 °/s
+Raw Accel -> X: 0.420  Y: 0.654  Z: 0.588
+Raw Gyro  -> X: 2.137  Y: 7.252  Z: 7.733
+---
+LEG SENSOR
+Accel Mag : 2.271 g
+Gyro Mag  : 155.471 °/s
+Raw Accel -> X: -0.981  Y: 2.000  Z: -0.441
+Raw Gyro  -> X: 15.618  Y: -114.870  Z: -103.595
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.155 g
+Gyro Mag  : 43.339 °/s
+Raw Accel -> X: 0.650  Y: 0.802  Z: 0.517
+Raw Gyro  -> X: -25.206  Y: -28.397  Z: 20.893
+---
+LEG SENSOR
+Accel Mag : 2.292 g
+Gyro Mag  : 156.085 °/s
+Raw Accel -> X: -1.368  Y: 1.678  Z: -0.751
+Raw Gyro  -> X: -14.275  Y: 19.168  Z: 154.244
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.925 g
+Gyro Mag  : 17.519 °/s
+Raw Accel -> X: 0.572  Y: 0.559  Z: 0.465
+Raw Gyro  -> X: 2.527  Y: -10.420  Z: 13.855
+---
+LEG SENSOR
+Accel Mag : 1.083 g
+Gyro Mag  : 64.285 °/s
+Raw Accel -> X: -1.072  Y: 0.149  Z: -0.022
+Raw Gyro  -> X: 21.382  Y: 11.328  Z: 59.557
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.053 g
+Gyro Mag  : 32.497 °/s
+Raw Accel -> X: 0.594  Y: 0.712  Z: 0.501
+Raw Gyro  -> X: 29.809  Y: 6.718  Z: -11.061
+---
+LEG SENSOR
+Accel Mag : 0.905 g
+Gyro Mag  : 61.098 °/s
+Raw Accel -> X: -0.872  Y: 0.136  Z: 0.203
+Raw Gyro  -> X: 23.397  Y: 21.962  Z: 51.992
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.922 g
+Gyro Mag  : 22.685 °/s
+Raw Accel -> X: 0.541  Y: 0.603  Z: 0.442
+Raw Gyro  -> X: 16.557  Y: 4.076  Z: -14.962
+---
+LEG SENSOR
+Accel Mag : 0.921 g
+Gyro Mag  : 66.392 °/s
+Raw Accel -> X: -0.862  Y: 0.316  Z: 0.067
+Raw Gyro  -> X: 18.092  Y: 29.580  Z: 56.618
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.999 g
+Gyro Mag  : 29.379 °/s
+Raw Accel -> X: 0.579  Y: 0.635  Z: 0.509
+Raw Gyro  -> X: 1.031  Y: -9.214  Z: -27.878
+---
+LEG SENSOR
+Accel Mag : 1.050 g
+Gyro Mag  : 65.446 °/s
+Raw Accel -> X: -0.977  Y: 0.385  Z: -0.019
+Raw Gyro  -> X: 36.206  Y: 23.840  Z: 49.031
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.250 g
+Gyro Mag  : 52.965 °/s
+Raw Accel -> X: 0.668  Y: 0.889  Z: 0.569
+Raw Gyro  -> X: -32.595  Y: -9.046  Z: -40.756
+---
+LEG SENSOR
+Accel Mag : 1.662 g
+Gyro Mag  : 149.107 °/s
+Raw Accel -> X: -1.549  Y: 0.493  Z: 0.347
+Raw Gyro  -> X: 56.550  Y: 71.756  Z: 117.840
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.053 g
+Gyro Mag  : 47.452 °/s
+Raw Accel -> X: 0.582  Y: 0.642  Z: 0.600
+Raw Gyro  -> X: -33.779  Y: -4.076  Z: 33.076
+---
+LEG SENSOR
+Accel Mag : 1.019 g
+Gyro Mag  : 160.556 °/s
+Raw Accel -> X: -0.844  Y: 0.571  Z: 0.000
+Raw Gyro  -> X: 34.802  Y: 59.160  Z: 145.145
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.995 g
+Gyro Mag  : 27.743 °/s
+Raw Accel -> X: 0.532  Y: 0.716  Z: 0.441
+Raw Gyro  -> X: -16.534  Y: 18.458  Z: 12.473
+---
+LEG SENSOR
+Accel Mag : 0.316 g
+Gyro Mag  : 106.509 °/s
+Raw Accel -> X: -0.262  Y: -0.177  Z: -0.004
+Raw Gyro  -> X: 30.992  Y: -65.924  Z: -77.702
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.756 g
+Gyro Mag  : 31.244 °/s
+Raw Accel -> X: 0.365  Y: 0.529  Z: 0.399
+Raw Gyro  -> X: -4.580  Y: 18.756  Z: 24.565
+---
+LEG SENSOR
+Accel Mag : 0.913 g
+Gyro Mag  : 263.750 °/s
+Raw Accel -> X: -0.911  Y: 0.056  Z: 0.002
+Raw Gyro  -> X: -96.130  Y: -121.244  Z: -213.595
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.878 g
+Gyro Mag  : 9.181 °/s
+Raw Accel -> X: 0.397  Y: 0.583  Z: 0.522
+Raw Gyro  -> X: -6.550  Y: -1.931  Z: 6.137
+---
+LEG SENSOR
+Accel Mag : 1.963 g
+Gyro Mag  : 304.281 °/s
+Raw Accel -> X: -1.794  Y: 0.789  Z: 0.117
+Raw Gyro  -> X: -95.122  Y: -144.809  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.100 g
+Gyro Mag  : 13.273 °/s
+Raw Accel -> X: 0.448  Y: 0.758  Z: 0.660
+Raw Gyro  -> X: 11.099  Y: 5.824  Z: 4.366
+---
+LEG SENSOR
+Accel Mag : 1.482 g
+Gyro Mag  : 131.663 °/s
+Raw Accel -> X: -0.974  Y: 1.065  Z: -0.338
+Raw Gyro  -> X: -42.466  Y: 54.046  Z: 112.298
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.288 g
+Gyro Mag  : 50.404 °/s
+Raw Accel -> X: 0.485  Y: 0.999  Z: 0.653
+Raw Gyro  -> X: 14.466  Y: -44.237  Z: -19.351
+---
+LEG SENSOR
+Accel Mag : 0.812 g
+Gyro Mag  : 123.691 °/s
+Raw Accel -> X: -0.672  Y: 0.395  Z: 0.228
+Raw Gyro  -> X: -54.084  Y: 20.374  Z: 109.359
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.826 g
+Gyro Mag  : 21.488 °/s
+Raw Accel -> X: 0.513  Y: 0.514  Z: 0.393
+Raw Gyro  -> X: 1.969  Y: -15.229  Z: 15.031
+---
+LEG SENSOR
+Accel Mag : 0.964 g
+Gyro Mag  : 63.281 °/s
+Raw Accel -> X: -0.909  Y: 0.245  Z: 0.206
+Raw Gyro  -> X: 17.031  Y: 9.756  Z: 60.160
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.086 g
+Gyro Mag  : 35.713 °/s
+Raw Accel -> X: 0.609  Y: 0.718  Z: 0.540
+Raw Gyro  -> X: 21.031  Y: 25.870  Z: -12.802
+---
+LEG SENSOR
+Accel Mag : 0.946 g
+Gyro Mag  : 66.775 °/s
+Raw Accel -> X: -0.891  Y: 0.295  Z: 0.119
+Raw Gyro  -> X: 32.420  Y: 20.870  Z: 54.519
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.883 g
+Gyro Mag  : 14.327 °/s
+Raw Accel -> X: 0.428  Y: 0.649  Z: 0.418
+Raw Gyro  -> X: 7.206  Y: 7.282  Z: -10.015
+---
+LEG SENSOR
+Accel Mag : 0.961 g
+Gyro Mag  : 70.056 °/s
+Raw Accel -> X: -0.880  Y: 0.385  Z: 0.035
+Raw Gyro  -> X: 22.954  Y: 26.595  Z: 60.611
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.048 g
+Gyro Mag  : 23.368 °/s
+Raw Accel -> X: 0.567  Y: 0.719  Z: 0.510
+Raw Gyro  -> X: -7.397  Y: -3.794  Z: -21.840
+---
+LEG SENSOR
+Accel Mag : 1.143 g
+Gyro Mag  : 88.543 °/s
+Raw Accel -> X: -1.057  Y: 0.411  Z: -0.144
+Raw Gyro  -> X: 29.153  Y: 38.206  Z: 74.366
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.306 g
+Gyro Mag  : 52.008 °/s
+Raw Accel -> X: 0.627  Y: 0.935  Z: 0.663
+Raw Gyro  -> X: -17.962  Y: -22.023  Z: -43.557
+---
+LEG SENSOR
+Accel Mag : 2.001 g
+Gyro Mag  : 208.290 °/s
+Raw Accel -> X: -1.920  Y: 0.023  Z: 0.564
+Raw Gyro  -> X: 143.771  Y: 50.931  Z: 141.847
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.066 g
+Gyro Mag  : 45.868 °/s
+Raw Accel -> X: 0.432  Y: 0.809  Z: 0.542
+Raw Gyro  -> X: -39.168  Y: 22.573  Z: 7.763
+---
+LEG SENSOR
+Accel Mag : 0.520 g
+Gyro Mag  : 81.001 °/s
+Raw Accel -> X: -0.500  Y: 0.042  Z: 0.135
+Raw Gyro  -> X: 58.962  Y: 13.206  Z: 53.947
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.920 g
+Gyro Mag  : 29.445 °/s
+Raw Accel -> X: 0.463  Y: 0.651  Z: 0.457
+Raw Gyro  -> X: -10.290  Y: 10.901  Z: 25.344
+---
+LEG SENSOR
+Accel Mag : 0.298 g
+Gyro Mag  : 167.861 °/s
+Raw Accel -> X: -0.243  Y: -0.171  Z: -0.014
+Raw Gyro  -> X: -42.466  Y: -73.076  Z: -145.031
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.768 g
+Gyro Mag  : 24.694 °/s
+Raw Accel -> X: 0.307  Y: 0.552  Z: 0.437
+Raw Gyro  -> X: 2.366  Y: 21.198  Z: 12.443
+---
+LEG SENSOR
+Accel Mag : 1.240 g
+Gyro Mag  : 291.139 °/s
+Raw Accel -> X: -1.220  Y: 0.206  Z: 0.075
+Raw Gyro  -> X: -72.427  Y: -130.183  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.885 g
+Gyro Mag  : 8.053 °/s
+Raw Accel -> X: 0.416  Y: 0.571  Z: 0.533
+Raw Gyro  -> X: 3.969  Y: -5.145  Z: 4.756
+---
+LEG SENSOR
+Accel Mag : 2.674 g
+Gyro Mag  : 242.663 °/s
+Raw Accel -> X: -1.773  Y: 2.000  Z: 0.083
+Raw Gyro  -> X: -107.786  Y: -116.580  Z: -183.511
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.188 g
+Gyro Mag  : 21.283 °/s
+Raw Accel -> X: 0.583  Y: 0.809  Z: 0.646
+Raw Gyro  -> X: 19.435  Y: 4.504  Z: -7.412
+---
+LEG SENSOR
+Accel Mag : 1.448 g
+Gyro Mag  : 142.293 °/s
+Raw Accel -> X: -1.265  Y: 0.677  Z: -0.198
+Raw Gyro  -> X: -84.168  Y: 28.901  Z: 111.031
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.065 g
+Gyro Mag  : 29.671 °/s
+Raw Accel -> X: 0.529  Y: 0.682  Z: 0.624
+Raw Gyro  -> X: 7.214  Y: -28.771  Z: 0.756
+---
+LEG SENSOR
+Accel Mag : 1.005 g
+Gyro Mag  : 91.240 °/s
+Raw Accel -> X: -0.987  Y: 0.161  Z: 0.092
+Raw Gyro  -> X: 64.405  Y: 7.954  Z: 64.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.067 g
+Gyro Mag  : 46.325 °/s
+Raw Accel -> X: 0.582  Y: 0.757  Z: 0.476
+Raw Gyro  -> X: 35.305  Y: 29.992  Z: -0.053
+---
+LEG SENSOR
+Accel Mag : 0.944 g
+Gyro Mag  : 56.656 °/s
+Raw Accel -> X: -0.911  Y: 0.182  Z: 0.170
+Raw Gyro  -> X: 24.977  Y: 17.076  Z: 47.901
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.903 g
+Gyro Mag  : 24.373 °/s
+Raw Accel -> X: 0.458  Y: 0.680  Z: 0.379
+Raw Gyro  -> X: 16.504  Y: 17.931  Z: -0.397
+---
+LEG SENSOR
+Accel Mag : 0.945 g
+Gyro Mag  : 55.707 °/s
+Raw Accel -> X: -0.889  Y: 0.312  Z: 0.069
+Raw Gyro  -> X: 19.710  Y: 18.153  Z: 48.840
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.940 g
+Gyro Mag  : 25.151 °/s
+Raw Accel -> X: 0.540  Y: 0.650  Z: 0.411
+Raw Gyro  -> X: 24.053  Y: 6.473  Z: -3.481
+---
+LEG SENSOR
+Accel Mag : 1.065 g
+Gyro Mag  : 68.584 °/s
+Raw Accel -> X: -0.978  Y: 0.420  Z: 0.010
+Raw Gyro  -> X: 45.229  Y: 17.855  Z: 48.366
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.145 g
+Gyro Mag  : 13.284 °/s
+Raw Accel -> X: 0.533  Y: 0.875  Z: 0.510
+Raw Gyro  -> X: -4.260  Y: -3.084  Z: -12.198
+---
+LEG SENSOR
+Accel Mag : 1.285 g
+Gyro Mag  : 134.124 °/s
+Raw Accel -> X: -1.140  Y: 0.516  Z: 0.294
+Raw Gyro  -> X: 70.802  Y: 67.725  Z: 91.595
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.157 g
+Gyro Mag  : 39.973 °/s
+Raw Accel -> X: 0.573  Y: 0.768  Z: 0.649
+Raw Gyro  -> X: -32.740  Y: -22.931  Z: -0.267
+---
+LEG SENSOR
+Accel Mag : 1.240 g
+Gyro Mag  : 173.092 °/s
+Raw Accel -> X: -1.214  Y: 0.241  Z: -0.067
+Raw Gyro  -> X: 28.939  Y: 58.840  Z: 160.191
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.109 g
+Gyro Mag  : 32.321 °/s
+Raw Accel -> X: 0.491  Y: 0.907  Z: 0.408
+Raw Gyro  -> X: -30.794  Y: 9.198  Z: 3.435
+---
+LEG SENSOR
+Accel Mag : 0.275 g
+Gyro Mag  : 37.910 °/s
+Raw Accel -> X: -0.259  Y: -0.059  Z: 0.069
+Raw Gyro  -> X: 34.145  Y: -12.115  Z: -11.160
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.826 g
+Gyro Mag  : 34.375 °/s
+Raw Accel -> X: 0.373  Y: 0.613  Z: 0.410
+Raw Gyro  -> X: -33.588  Y: -1.466  Z: 7.168
+---
+LEG SENSOR
+Accel Mag : 0.461 g
+Gyro Mag  : 226.059 °/s
+Raw Accel -> X: -0.407  Y: -0.197  Z: 0.089
+Raw Gyro  -> X: -76.000  Y: -92.786  Z: -191.618
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.816 g
+Gyro Mag  : 32.754 °/s
+Raw Accel -> X: 0.375  Y: 0.572  Z: 0.444
+Raw Gyro  -> X: -23.061  Y: -21.290  Z: 9.366
+---
+LEG SENSOR
+Accel Mag : 2.011 g
+Gyro Mag  : 306.079 °/s
+Raw Accel -> X: -1.890  Y: 0.662  Z: 0.191
+Raw Gyro  -> X: -79.847  Y: -157.290  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.051 g
+Gyro Mag  : 20.974 °/s
+Raw Accel -> X: 0.503  Y: 0.662  Z: 0.643
+Raw Gyro  -> X: 20.061  Y: 6.069  Z: 0.794
+---
+LEG SENSOR
+Accel Mag : 2.605 g
+Gyro Mag  : 104.683 °/s
+Raw Accel -> X: -1.122  Y: 2.000  Z: -1.236
+Raw Gyro  -> X: 67.931  Y: -71.344  Z: -35.412
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.198 g
+Gyro Mag  : 26.413 °/s
+Raw Accel -> X: 0.633  Y: 0.851  Z: 0.556
+Raw Gyro  -> X: 15.450  Y: -17.092  Z: 12.916
+---
+LEG SENSOR
+Accel Mag : 1.575 g
+Gyro Mag  : 135.622 °/s
+Raw Accel -> X: -1.573  Y: -0.075  Z: 0.018
+Raw Gyro  -> X: -50.198  Y: 8.733  Z: 125.687
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.944 g
+Gyro Mag  : 18.063 °/s
+Raw Accel -> X: 0.546  Y: 0.622  Z: 0.454
+Raw Gyro  -> X: 5.244  Y: 4.565  Z: 16.672
+---
+LEG SENSOR
+Accel Mag : 0.909 g
+Gyro Mag  : 69.716 °/s
+Raw Accel -> X: -0.891  Y: 0.160  Z: 0.089
+Raw Gyro  -> X: 12.260  Y: 13.977  Z: 67.191
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.981 g
+Gyro Mag  : 35.400 °/s
+Raw Accel -> X: 0.550  Y: 0.736  Z: 0.343
+Raw Gyro  -> X: 21.634  Y: 25.679  Z: -11.214
+---
+LEG SENSOR
+Accel Mag : 0.944 g
+Gyro Mag  : 68.513 °/s
+Raw Accel -> X: -0.896  Y: 0.252  Z: 0.157
+Raw Gyro  -> X: 29.481  Y: 28.824  Z: 54.718
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.857 g
+Gyro Mag  : 16.286 °/s
+Raw Accel -> X: 0.447  Y: 0.640  Z: 0.355
+Raw Gyro  -> X: 14.053  Y: 6.786  Z: -4.656
+---
+LEG SENSOR
+Accel Mag : 0.952 g
+Gyro Mag  : 58.688 °/s
+Raw Accel -> X: -0.874  Y: 0.376  Z: 0.028
+Raw Gyro  -> X: 20.237  Y: 25.542  Z: 48.809
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.026 g
+Gyro Mag  : 19.907 °/s
+Raw Accel -> X: 0.509  Y: 0.700  Z: 0.551
+Raw Gyro  -> X: 14.206  Y: -4.634  Z: -13.153
+---
+LEG SENSOR
+Accel Mag : 1.042 g
+Gyro Mag  : 70.824 °/s
+Raw Accel -> X: -0.961  Y: 0.402  Z: 0.015
+Raw Gyro  -> X: 39.351  Y: 29.855  Z: 50.756
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.171 g
+Gyro Mag  : 37.296 °/s
+Raw Accel -> X: 0.572  Y: 0.923  Z: 0.440
+Raw Gyro  -> X: -23.237  Y: -18.954  Z: -22.176
+---
+LEG SENSOR
+Accel Mag : 1.624 g
+Gyro Mag  : 161.953 °/s
+Raw Accel -> X: -1.494  Y: 0.415  Z: 0.485
+Raw Gyro  -> X: 72.977  Y: 81.588  Z: 119.359
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.050 g
+Gyro Mag  : 60.899 °/s
+Raw Accel -> X: 0.481  Y: 0.733  Z: 0.579
+Raw Gyro  -> X: -42.595  Y: -14.168  Z: 41.153
+---
+LEG SENSOR
+Accel Mag : 1.079 g
+Gyro Mag  : 156.658 °/s
+Raw Accel -> X: -0.982  Y: 0.427  Z: 0.126
+Raw Gyro  -> X: 48.160  Y: 58.870  Z: 136.954
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.027 g
+Gyro Mag  : 30.598 °/s
+Raw Accel -> X: 0.528  Y: 0.760  Z: 0.444
+Raw Gyro  -> X: -28.588  Y: -9.313  Z: 5.679
+---
+LEG SENSOR
+Accel Mag : 0.251 g
+Gyro Mag  : 86.134 °/s
+Raw Accel -> X: -0.196  Y: -0.154  Z: -0.025
+Raw Gyro  -> X: -2.802  Y: -45.618  Z: -73.008
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.800 g
+Gyro Mag  : 23.170 °/s
+Raw Accel -> X: 0.356  Y: 0.560  Z: 0.447
+Raw Gyro  -> X: -9.122  Y: 9.443  Z: 19.092
+---
+LEG SENSOR
+Accel Mag : 0.748 g
+Gyro Mag  : 278.515 °/s
+Raw Accel -> X: -0.723  Y: -0.139  Z: 0.131
+Raw Gyro  -> X: -103.733  Y: -107.015  Z: -235.282
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.855 g
+Gyro Mag  : 3.032 °/s
+Raw Accel -> X: 0.360  Y: 0.578  Z: 0.516
+Raw Gyro  -> X: -2.458  Y: -1.260  Z: 1.252
+---
+LEG SENSOR
+Accel Mag : 2.299 g
+Gyro Mag  : 310.969 °/s
+Raw Accel -> X: -2.000  Y: 1.121  Z: 0.173
+Raw Gyro  -> X: -87.099  Y: -162.931  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.131 g
+Gyro Mag  : 14.224 °/s
+Raw Accel -> X: 0.574  Y: 0.756  Z: 0.615
+Raw Gyro  -> X: 12.031  Y: -4.626  Z: 6.015
+---
+LEG SENSOR
+Accel Mag : 1.139 g
+Gyro Mag  : 145.538 °/s
+Raw Accel -> X: -1.030  Y: 0.475  Z: 0.109
+Raw Gyro  -> X: -33.885  Y: 52.954  Z: 131.260
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.242 g
+Gyro Mag  : 30.844 °/s
+Raw Accel -> X: 0.664  Y: 0.845  Z: 0.622
+Raw Gyro  -> X: 15.870  Y: -26.206  Z: 3.565
+---
+LEG SENSOR
+Accel Mag : 0.856 g
+Gyro Mag  : 88.720 °/s
+Raw Accel -> X: -0.731  Y: 0.272  Z: 0.353
+Raw Gyro  -> X: 18.397  Y: 17.656  Z: 84.977
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.024 g
+Gyro Mag  : 33.570 °/s
+Raw Accel -> X: 0.541  Y: 0.737  Z: 0.463
+Raw Gyro  -> X: 21.397  Y: 25.779  Z: -2.145
+---
+LEG SENSOR
+Accel Mag : 0.959 g
+Gyro Mag  : 65.221 °/s
+Raw Accel -> X: -0.905  Y: 0.233  Z: 0.217
+Raw Gyro  -> X: 29.214  Y: 18.229  Z: 55.389
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.932 g
+Gyro Mag  : 16.206 °/s
+Raw Accel -> X: 0.500  Y: 0.672  Z: 0.409
+Raw Gyro  -> X: 10.824  Y: 11.275  Z: 4.282
+---
+LEG SENSOR
+Accel Mag : 0.960 g
+Gyro Mag  : 71.558 °/s
+Raw Accel -> X: -0.905  Y: 0.315  Z: 0.044
+Raw Gyro  -> X: 27.008  Y: 27.450  Z: 60.313
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.932 g
+Gyro Mag  : 19.640 °/s
+Raw Accel -> X: 0.480  Y: 0.699  Z: 0.386
+Raw Gyro  -> X: 11.313  Y: 9.534  Z: -12.916
+---
+LEG SENSOR
+Accel Mag : 1.008 g
+Gyro Mag  : 57.707 °/s
+Raw Accel -> X: -0.909  Y: 0.434  Z: -0.031
+Raw Gyro  -> X: 19.061  Y: 23.000  Z: 49.374
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.083 g
+Gyro Mag  : 19.072 °/s
+Raw Accel -> X: 0.543  Y: 0.789  Z: 0.507
+Raw Gyro  -> X: 0.931  Y: 0.840  Z: -19.031
+---
+LEG SENSOR
+Accel Mag : 1.170 g
+Gyro Mag  : 87.857 °/s
+Raw Accel -> X: -1.099  Y: 0.357  Z: -0.186
+Raw Gyro  -> X: 37.634  Y: 41.122  Z: 67.908
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.242 g
+Gyro Mag  : 46.138 °/s
+Raw Accel -> X: 0.623  Y: 0.867  Z: 0.634
+Raw Gyro  -> X: -21.023  Y: -33.084  Z: -24.336
+---
+LEG SENSOR
+Accel Mag : 1.861 g
+Gyro Mag  : 194.430 °/s
+Raw Accel -> X: -1.747  Y: 0.034  Z: 0.641
+Raw Gyro  -> X: 129.794  Y: 42.412  Z: 138.412
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.108 g
+Gyro Mag  : 35.457 °/s
+Raw Accel -> X: 0.458  Y: 0.862  Z: 0.524
+Raw Gyro  -> X: -35.130  Y: -0.847  Z: 4.733
+---
+LEG SENSOR
+Accel Mag : 0.463 g
+Gyro Mag  : 102.553 °/s
+Raw Accel -> X: -0.423  Y: -0.124  Z: 0.144
+Raw Gyro  -> X: 95.588  Y: -10.763  Z: 35.557
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.966 g
+Gyro Mag  : 31.852 °/s
+Raw Accel -> X: 0.474  Y: 0.690  Z: 0.482
+Raw Gyro  -> X: -30.420  Y: 1.924  Z: 9.244
+---
+LEG SENSOR
+Accel Mag : 0.422 g
+Gyro Mag  : 176.393 °/s
+Raw Accel -> X: -0.344  Y: -0.242  Z: -0.020
+Raw Gyro  -> X: -67.779  Y: -79.809  Z: -141.954
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.790 g
+Gyro Mag  : 27.740 °/s
+Raw Accel -> X: 0.335  Y: 0.563  Z: 0.442
+Raw Gyro  -> X: -11.695  Y: 1.664  Z: 25.099
+---
+LEG SENSOR
+Accel Mag : 1.413 g
+Gyro Mag  : 284.807 °/s
+Raw Accel -> X: -1.355  Y: 0.387  Z: 0.113
+Raw Gyro  -> X: -49.244  Y: -126.969  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.904 g
+Gyro Mag  : 15.406 °/s
+Raw Accel -> X: 0.374  Y: 0.612  Z: 0.551
+Raw Gyro  -> X: 11.351  Y: -1.168  Z: 10.351
+---
+LEG SENSOR
+Accel Mag : 2.509 g
+Gyro Mag  : 209.549 °/s
+Raw Accel -> X: -1.551  Y: 1.939  Z: -0.361
+Raw Gyro  -> X: -115.137  Y: -106.198  Z: -139.198
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.126 g
+Gyro Mag  : 23.188 °/s
+Raw Accel -> X: 0.596  Y: 0.793  Z: 0.533
+Raw Gyro  -> X: -3.901  Y: -22.580  Z: 3.550
+---
+LEG SENSOR
+Accel Mag : 1.302 g
+Gyro Mag  : 107.131 °/s
+Raw Accel -> X: -1.029  Y: 0.796  Z: -0.060
+Raw Gyro  -> X: -40.038  Y: 17.656  Z: 97.786
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.048 g
+Gyro Mag  : 9.040 °/s
+Raw Accel -> X: 0.666  Y: 0.586  Z: 0.559
+Raw Gyro  -> X: -0.626  Y: -4.550  Z: 7.786
+---
+LEG SENSOR
+Accel Mag : 1.087 g
+Gyro Mag  : 83.747 °/s
+Raw Accel -> X: -1.043  Y: 0.299  Z: 0.067
+Raw Gyro  -> X: 41.176  Y: 15.321  Z: 71.298
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.030 g
+Gyro Mag  : 32.938 °/s
+Raw Accel -> X: 0.621  Y: 0.722  Z: 0.394
+Raw Gyro  -> X: 28.618  Y: 15.023  Z: -6.344
+---
+LEG SENSOR
+Accel Mag : 0.951 g
+Gyro Mag  : 64.906 °/s
+Raw Accel -> X: -0.905  Y: 0.255  Z: 0.147
+Raw Gyro  -> X: 31.908  Y: 16.718  Z: 53.992
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.955 g
+Gyro Mag  : 48.412 °/s
+Raw Accel -> X: 0.528  Y: 0.679  Z: 0.415
+Raw Gyro  -> X: 45.840  Y: 15.160  Z: 3.557
+---
+LEG SENSOR
+Accel Mag : 0.931 g
+Gyro Mag  : 66.125 °/s
+Raw Accel -> X: -0.867  Y: 0.334  Z: 0.061
+Raw Gyro  -> X: 31.863  Y: 24.244  Z: 52.626
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.988 g
+Gyro Mag  : 18.688 °/s
+Raw Accel -> X: 0.495  Y: 0.692  Z: 0.503
+Raw Gyro  -> X: 15.916  Y: 0.038  Z: -9.794
+---
+LEG SENSOR
+Accel Mag : 1.071 g
+Gyro Mag  : 63.778 °/s
+Raw Accel -> X: -0.983  Y: 0.426  Z: -0.002
+Raw Gyro  -> X: 25.870  Y: 26.885  Z: 51.725
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.180 g
+Gyro Mag  : 20.523 °/s
+Raw Accel -> X: 0.616  Y: 0.842  Z: 0.551
+Raw Gyro  -> X: 0.252  Y: -6.786  Z: -19.366
+---
+LEG SENSOR
+Accel Mag : 1.335 g
+Gyro Mag  : 135.779 °/s
+Raw Accel -> X: -1.218  Y: 0.481  Z: 0.259
+Raw Gyro  -> X: 70.443  Y: 67.282  Z: 94.588
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.149 g
+Gyro Mag  : 34.293 °/s
+Raw Accel -> X: 0.632  Y: 0.756  Z: 0.593
+Raw Gyro  -> X: -34.237  Y: -0.786  Z: -1.794
+---
+LEG SENSOR
+Accel Mag : 1.162 g
+Gyro Mag  : 164.337 °/s
+Raw Accel -> X: -1.067  Y: 0.415  Z: 0.195
+Raw Gyro  -> X: 56.275  Y: 37.924  Z: 149.672
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.066 g
+Gyro Mag  : 38.550 °/s
+Raw Accel -> X: 0.583  Y: 0.820  Z: 0.355
+Raw Gyro  -> X: -37.252  Y: 8.031  Z: 5.824
+---
+LEG SENSOR
+Accel Mag : 0.162 g
+Gyro Mag  : 86.895 °/s
+Raw Accel -> X: -0.161  Y: 0.009  Z: 0.020
+Raw Gyro  -> X: 68.168  Y: -35.405  Z: -40.626
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.836 g
+Gyro Mag  : 38.230 °/s
+Raw Accel -> X: 0.477  Y: 0.565  Z: 0.390
+Raw Gyro  -> X: -31.939  Y: 6.847  Z: 19.863
+---
+LEG SENSOR
+Accel Mag : 0.457 g
+Gyro Mag  : 249.795 °/s
+Raw Accel -> X: -0.400  Y: -0.170  Z: 0.139
+Raw Gyro  -> X: -142.672  Y: -89.840  Z: -184.313
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.802 g
+Gyro Mag  : 17.357 °/s
+Raw Accel -> X: 0.382  Y: 0.554  Z: 0.437
+Raw Gyro  -> X: -4.794  Y: 16.565  Z: 1.969
+---
+LEG SENSOR
+Accel Mag : 2.121 g
+Gyro Mag  : 306.194 °/s
+Raw Accel -> X: -1.978  Y: 0.722  Z: 0.250
+Raw Gyro  -> X: -84.679  Y: -154.969  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.054 g
+Gyro Mag  : 15.171 °/s
+Raw Accel -> X: 0.428  Y: 0.737  Z: 0.620
+Raw Gyro  -> X: 10.611  Y: 6.916  Z: 8.351
+---
+LEG SENSOR
+Accel Mag : 2.523 g
+Gyro Mag  : 56.325 °/s
+Raw Accel -> X: -1.106  Y: 1.937  Z: -1.180
+Raw Gyro  -> X: 46.443  Y: -29.924  Z: 10.962
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.157 g
+Gyro Mag  : 31.150 °/s
+Raw Accel -> X: 0.590  Y: 0.855  Z: 0.510
+Raw Gyro  -> X: 18.298  Y: -22.672  Z: 11.023
+---
+LEG SENSOR
+Accel Mag : 1.282 g
+Gyro Mag  : 151.400 °/s
+Raw Accel -> X: -1.280  Y: -0.054  Z: 0.066
+Raw Gyro  -> X: -74.908  Y: 1.168  Z: 131.565
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.972 g
+Gyro Mag  : 24.671 °/s
+Raw Accel -> X: 0.535  Y: 0.676  Z: 0.450
+Raw Gyro  -> X: 17.084  Y: -9.908  Z: 14.786
+---
+LEG SENSOR
+Accel Mag : 0.939 g
+Gyro Mag  : 70.896 °/s
+Raw Accel -> X: -0.814  Y: 0.399  Z: 0.244
+Raw Gyro  -> X: 15.298  Y: 18.076  Z: 66.824
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.954 g
+Gyro Mag  : 34.648 °/s
+Raw Accel -> X: 0.555  Y: 0.669  Z: 0.394
+Raw Gyro  -> X: 29.389  Y: 18.076  Z: -3.160
+---
+LEG SENSOR
+Accel Mag : 0.911 g
+Gyro Mag  : 68.195 °/s
+Raw Accel -> X: -0.853  Y: 0.307  Z: 0.094
+Raw Gyro  -> X: 22.504  Y: 21.542  Z: 60.664
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.945 g
+Gyro Mag  : 10.528 °/s
+Raw Accel -> X: 0.507  Y: 0.675  Z: 0.424
+Raw Gyro  -> X: 3.969  Y: 2.008  Z: -9.542
+---
+LEG SENSOR
+Accel Mag : 0.979 g
+Gyro Mag  : 58.824 °/s
+Raw Accel -> X: -0.877  Y: 0.436  Z: -0.009
+Raw Gyro  -> X: 11.168  Y: 21.481  Z: 53.611
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.044 g
+Gyro Mag  : 13.001 °/s
+Raw Accel -> X: 0.526  Y: 0.716  Z: 0.549
+Raw Gyro  -> X: -3.718  Y: 2.298  Z: -12.244
+---
+LEG SENSOR
+Accel Mag : 1.115 g
+Gyro Mag  : 76.648 °/s
+Raw Accel -> X: -1.052  Y: 0.368  Z: -0.047
+Raw Gyro  -> X: 46.595  Y: 24.481  Z: 55.718
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.187 g
+Gyro Mag  : 27.356 °/s
+Raw Accel -> X: 0.601  Y: 0.874  Z: 0.533
+Raw Gyro  -> X: -19.496  Y: 0.527  Z: -19.183
+---
+LEG SENSOR
+Accel Mag : 1.843 g
+Gyro Mag  : 187.654 °/s
+Raw Accel -> X: -1.732  Y: 0.369  Z: 0.510
+Raw Gyro  -> X: 133.817  Y: 48.901  Z: 122.130
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.005 g
+Gyro Mag  : 39.583 °/s
+Raw Accel -> X: 0.487  Y: 0.725  Z: 0.498
+Raw Gyro  -> X: -32.344  Y: -11.969  Z: 19.427
+---
+LEG SENSOR
+Accel Mag : 0.935 g
+Gyro Mag  : 130.550 °/s
+Raw Accel -> X: -0.816  Y: 0.437  Z: 0.138
+Raw Gyro  -> X: 54.336  Y: 38.740  Z: 112.206
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.985 g
+Gyro Mag  : 20.838 °/s
+Raw Accel -> X: 0.484  Y: 0.727  Z: 0.456
+Raw Gyro  -> X: -8.282  Y: 19.084  Z: 1.191
+---
+LEG SENSOR
+Accel Mag : 0.332 g
+Gyro Mag  : 112.774 °/s
+Raw Accel -> X: -0.189  Y: -0.190  Z: -0.196
+Raw Gyro  -> X: -42.771  Y: -38.962  Z: -96.802
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.803 g
+Gyro Mag  : 18.834 °/s
+Raw Accel -> X: 0.382  Y: 0.571  Z: 0.415
+Raw Gyro  -> X: -13.931  Y: 9.237  Z: 8.679
+---
+LEG SENSOR
+Accel Mag : 0.908 g
+Gyro Mag  : 289.741 °/s
+Raw Accel -> X: -0.894  Y: 0.114  Z: 0.113
+Raw Gyro  -> X: -118.191  Y: -86.092  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.938 g
+Gyro Mag  : 11.886 °/s
+Raw Accel -> X: 0.429  Y: 0.643  Z: 0.532
+Raw Gyro  -> X: 0.725  Y: 11.863  Z: -0.137
+---
+LEG SENSOR
+Accel Mag : 2.270 g
+Gyro Mag  : 305.162 °/s
+Raw Accel -> X: -1.649  Y: 1.556  Z: 0.099
+Raw Gyro  -> X: -82.855  Y: -153.916  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.114 g
+Gyro Mag  : 11.342 °/s
+Raw Accel -> X: 0.480  Y: 0.809  Z: 0.596
+Raw Gyro  -> X: 5.527  Y: 4.313  Z: 8.916
+---
+LEG SENSOR
+Accel Mag : 2.008 g
+Gyro Mag  : 173.164 °/s
+Raw Accel -> X: -1.358  Y: -1.422  Z: 0.409
+Raw Gyro  -> X: -109.611  Y: 54.718  Z: 122.382
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.169 g
+Gyro Mag  : 15.512 °/s
+Raw Accel -> X: 0.591  Y: 0.790  Z: 0.626
+Raw Gyro  -> X: 9.992  Y: -11.221  Z: -3.855
+---
+LEG SENSOR
+Accel Mag : 0.892 g
+Gyro Mag  : 80.266 °/s
+Raw Accel -> X: -0.714  Y: 0.343  Z: 0.410
+Raw Gyro  -> X: 47.260  Y: 8.366  Z: 64.336
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.006 g
+Gyro Mag  : 35.840 °/s
+Raw Accel -> X: 0.503  Y: 0.726  Z: 0.482
+Raw Gyro  -> X: 27.985  Y: 21.695  Z: -5.542
+---
+LEG SENSOR
+Accel Mag : 0.935 g
+Gyro Mag  : 59.108 °/s
+Raw Accel -> X: -0.877  Y: 0.224  Z: 0.234
+Raw Gyro  -> X: 36.679  Y: 12.847  Z: 44.534
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.902 g
+Gyro Mag  : 8.708 °/s
+Raw Accel -> X: 0.453  Y: 0.653  Z: 0.427
+Raw Gyro  -> X: 7.053  Y: 5.053  Z: 0.740
+---
+LEG SENSOR
+Accel Mag : 0.921 g
+Gyro Mag  : 59.012 °/s
+Raw Accel -> X: -0.872  Y: 0.287  Z: 0.069
+Raw Gyro  -> X: 27.870  Y: 15.511  Z: 49.649
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.049 g
+Gyro Mag  : 16.443 °/s
+Raw Accel -> X: 0.556  Y: 0.696  Z: 0.555
+Raw Gyro  -> X: 6.221  Y: -2.489  Z: -15.015
+---
+LEG SENSOR
+Accel Mag : 1.010 g
+Gyro Mag  : 68.228 °/s
+Raw Accel -> X: -0.924  Y: 0.397  Z: 0.090
+Raw Gyro  -> X: 41.718  Y: 21.542  Z: 49.504
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.172 g
+Gyro Mag  : 20.868 °/s
+Raw Accel -> X: 0.739  Y: 0.741  Z: 0.527
+Raw Gyro  -> X: 1.282  Y: 8.962  Z: -18.802
+---
+LEG SENSOR
+Accel Mag : 1.151 g
+Gyro Mag  : 112.039 °/s
+Raw Accel -> X: -1.034  Y: 0.454  Z: 0.219
+Raw Gyro  -> X: 41.786  Y: 60.748  Z: 84.359
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.222 g
+Gyro Mag  : 62.549 °/s
+Raw Accel -> X: 0.645  Y: 0.855  Z: 0.588
+Raw Gyro  -> X: -33.420  Y: 5.481  Z: -52.588
+---
+LEG SENSOR
+Accel Mag : 1.699 g
+Gyro Mag  : 191.759 °/s
+Raw Accel -> X: -1.684  Y: -0.075  Z: 0.216
+Raw Gyro  -> X: 80.198  Y: 48.145  Z: 167.397
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.015 g
+Gyro Mag  : 29.135 °/s
+Raw Accel -> X: 0.390  Y: 0.842  Z: 0.411
+Raw Gyro  -> X: -9.924  Y: 25.794  Z: 9.221
+---
+LEG SENSOR
+Accel Mag : 0.281 g
+Gyro Mag  : 43.484 °/s
+Raw Accel -> X: -0.268  Y: 0.084  Z: -0.006
+Raw Gyro  -> X: 24.718  Y: 27.725  Z: 22.611
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.859 g
+Gyro Mag  : 16.369 °/s
+Raw Accel -> X: 0.439  Y: 0.616  Z: 0.406
+Raw Gyro  -> X: -8.290  Y: 3.763  Z: 13.603
+---
+LEG SENSOR
+Accel Mag : 0.351 g
+Gyro Mag  : 192.023 °/s
+Raw Accel -> X: -0.279  Y: -0.180  Z: 0.113
+Raw Gyro  -> X: -65.092  Y: -39.672  Z: -176.244
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.843 g
+Gyro Mag  : 8.563 °/s
+Raw Accel -> X: 0.378  Y: 0.609  Z: 0.444
+Raw Gyro  -> X: -1.763  Y: -5.466  Z: 6.351
+---
+LEG SENSOR
+Accel Mag : 1.532 g
+Gyro Mag  : 298.066 °/s
+Raw Accel -> X: -1.430  Y: 0.438  Z: 0.331
+Raw Gyro  -> X: -105.351  Y: -123.191  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.937 g
+Gyro Mag  : 18.493 °/s
+Raw Accel -> X: 0.437  Y: 0.700  Z: 0.444
+Raw Gyro  -> X: 13.282  Y: -4.252  Z: 12.145
+---
+LEG SENSOR
+Accel Mag : 2.375 g
+Gyro Mag  : 234.962 °/s
+Raw Accel -> X: -1.233  Y: 2.000  Z: -0.346
+Raw Gyro  -> X: 88.412  Y: -146.634  Z: -160.901
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.139 g
+Gyro Mag  : 18.132 °/s
+Raw Accel -> X: 0.615  Y: 0.844  Z: 0.453
+Raw Gyro  -> X: 1.153  Y: -15.092  Z: 9.985
+---
+LEG SENSOR
+Accel Mag : 2.479 g
+Gyro Mag  : 152.642 °/s
+Raw Accel -> X: -1.257  Y: 2.000  Z: -0.751
+Raw Gyro  -> X: -15.939  Y: 23.504  Z: 149.977
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.932 g
+Gyro Mag  : 10.929 °/s
+Raw Accel -> X: 0.592  Y: 0.582  Z: 0.423
+Raw Gyro  -> X: -9.023  Y: -2.611  Z: 5.588
+---
+LEG SENSOR
+Accel Mag : 1.179 g
+Gyro Mag  : 79.923 °/s
+Raw Accel -> X: -1.176  Y: -0.009  Z: -0.085
+Raw Gyro  -> X: 41.145  Y: 18.679  Z: 65.924
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.041 g
+Gyro Mag  : 50.081 °/s
+Raw Accel -> X: 0.554  Y: 0.746  Z: 0.470
+Raw Gyro  -> X: 30.840  Y: 35.489  Z: -17.252
+---
+LEG SENSOR
+Accel Mag : 0.953 g
+Gyro Mag  : 71.775 °/s
+Raw Accel -> X: -0.933  Y: 0.180  Z: 0.072
+Raw Gyro  -> X: 32.099  Y: 25.305  Z: 59.000
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.877 g
+Gyro Mag  : 13.452 °/s
+Raw Accel -> X: 0.408  Y: 0.671  Z: 0.390
+Raw Gyro  -> X: 8.901  Y: 9.985  Z: 1.427
+---
+LEG SENSOR
+Accel Mag : 0.963 g
+Gyro Mag  : 64.046 °/s
+Raw Accel -> X: -0.905  Y: 0.328  Z: 0.028
+Raw Gyro  -> X: 18.260  Y: 29.366  Z: 53.908
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.057 g
+Gyro Mag  : 15.670 °/s
+Raw Accel -> X: 0.562  Y: 0.716  Z: 0.537
+Raw Gyro  -> X: 3.916  Y: -1.641  Z: -15.084
+---
+LEG SENSOR
+Accel Mag : 1.065 g
+Gyro Mag  : 61.735 °/s
+Raw Accel -> X: -0.979  Y: 0.420  Z: -0.004
+Raw Gyro  -> X: 37.160  Y: 21.191  Z: 44.511
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.112 g
+Gyro Mag  : 19.126 °/s
+Raw Accel -> X: 0.502  Y: 0.864  Z: 0.488
+Raw Gyro  -> X: -10.893  Y: -7.679  Z: -13.718
+---
+LEG SENSOR
+Accel Mag : 1.333 g
+Gyro Mag  : 138.056 °/s
+Raw Accel -> X: -1.223  Y: 0.447  Z: 0.284
+Raw Gyro  -> X: 76.389  Y: 66.351  Z: 93.924
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.141 g
+Gyro Mag  : 59.023 °/s
+Raw Accel -> X: 0.629  Y: 0.756  Z: 0.578
+Raw Gyro  -> X: -44.771  Y: -38.435  Z: 1.435
+---
+LEG SENSOR
+Accel Mag : 1.195 g
+Gyro Mag  : 172.618 °/s
+Raw Accel -> X: -1.050  Y: 0.546  Z: 0.165
+Raw Gyro  -> X: 86.076  Y: 43.458  Z: 143.176
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.990 g
+Gyro Mag  : 26.105 °/s
+Raw Accel -> X: 0.499  Y: 0.740  Z: 0.429
+Raw Gyro  -> X: -25.076  Y: 4.763  Z: 5.473
+---
+LEG SENSOR
+Accel Mag : 0.292 g
+Gyro Mag  : 58.842 °/s
+Raw Accel -> X: -0.270  Y: -0.112  Z: -0.013
+Raw Gyro  -> X: 38.817  Y: -33.466  Z: -28.908
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.815 g
+Gyro Mag  : 22.529 °/s
+Raw Accel -> X: 0.394  Y: 0.597  Z: 0.392
+Raw Gyro  -> X: -18.000  Y: 5.687  Z: 12.298
+---
+LEG SENSOR
+Accel Mag : 0.543 g
+Gyro Mag  : 251.402 °/s
+Raw Accel -> X: -0.456  Y: -0.278  Z: 0.096
+Raw Gyro  -> X: -141.328  Y: -89.137  Z: -187.840
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.861 g
+Gyro Mag  : 4.444 °/s
+Raw Accel -> X: 0.374  Y: 0.612  Z: 0.476
+Raw Gyro  -> X: -0.809  Y: 2.099  Z: 3.832
+---
+LEG SENSOR
+Accel Mag : 2.091 g
+Gyro Mag  : 297.495 °/s
+Raw Accel -> X: -1.913  Y: 0.804  Z: 0.255
+Raw Gyro  -> X: -50.206  Y: -153.015  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.045 g
+Gyro Mag  : 30.520 °/s
+Raw Accel -> X: 0.419  Y: 0.740  Z: 0.606
+Raw Gyro  -> X: 18.725  Y: 21.893  Z: 10.076
+---
+LEG SENSOR
+Accel Mag : 2.622 g
+Gyro Mag  : 81.117 °/s
+Raw Accel -> X: -1.112  Y: 2.000  Z: -1.281
+Raw Gyro  -> X: 61.328  Y: -47.565  Z: -23.588
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.276 g
+Gyro Mag  : 25.563 °/s
+Raw Accel -> X: 0.634  Y: 0.949  Z: 0.569
+Raw Gyro  -> X: 8.519  Y: -23.214  Z: 6.481
+---
+LEG SENSOR
+Accel Mag : 1.310 g
+Gyro Mag  : 137.969 °/s
+Raw Accel -> X: -1.298  Y: -0.128  Z: 0.121
+Raw Gyro  -> X: -60.664  Y: 5.153  Z: 123.809
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.901 g
+Gyro Mag  : 25.997 °/s
+Raw Accel -> X: 0.500  Y: 0.641  Z: 0.389
+Raw Gyro  -> X: 4.679  Y: 0.053  Z: 25.573
+---
+LEG SENSOR
+Accel Mag : 0.941 g
+Gyro Mag  : 60.303 °/s
+Raw Accel -> X: -0.920  Y: 0.192  Z: 0.041
+Raw Gyro  -> X: 7.168  Y: 11.603  Z: 58.740
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.020 g
+Gyro Mag  : 29.673 °/s
+Raw Accel -> X: 0.549  Y: 0.734  Z: 0.448
+Raw Gyro  -> X: 16.992  Y: 21.191  Z: -11.947
+---
+LEG SENSOR
+Accel Mag : 0.927 g
+Gyro Mag  : 69.315 °/s
+Raw Accel -> X: -0.885  Y: 0.233  Z: 0.148
+Raw Gyro  -> X: 25.344  Y: 24.878  Z: 59.527
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.886 g
+Gyro Mag  : 24.412 °/s
+Raw Accel -> X: 0.410  Y: 0.690  Z: 0.375
+Raw Gyro  -> X: 15.977  Y: 18.412  Z: -1.290
+---
+LEG SENSOR
+Accel Mag : 0.954 g
+Gyro Mag  : 67.986 °/s
+Raw Accel -> X: -0.864  Y: 0.400  Z: 0.053
+Raw Gyro  -> X: 19.267  Y: 30.412  Z: 57.672
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.971 g
+Gyro Mag  : 12.009 °/s
+Raw Accel -> X: 0.509  Y: 0.672  Z: 0.482
+Raw Gyro  -> X: 2.382  Y: -0.718  Z: -11.748
+---
+LEG SENSOR
+Accel Mag : 1.048 g
+Gyro Mag  : 70.831 °/s
+Raw Accel -> X: -0.947  Y: 0.445  Z: 0.055
+Raw Gyro  -> X: 32.275  Y: 32.382  Z: 54.099
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.158 g
+Gyro Mag  : 28.376 °/s
+Raw Accel -> X: 0.609  Y: 0.853  Z: 0.493
+Raw Gyro  -> X: -13.382  Y: -19.664  Z: -15.473
+---
+LEG SENSOR
+Accel Mag : 1.596 g
+Gyro Mag  : 146.770 °/s
+Raw Accel -> X: -1.452  Y: 0.470  Z: 0.464
+Raw Gyro  -> X: 75.427  Y: 71.611  Z: 103.557
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.072 g
+Gyro Mag  : 55.452 °/s
+Raw Accel -> X: 0.569  Y: 0.739  Z: 0.527
+Raw Gyro  -> X: -43.489  Y: -30.573  Z: 15.779
+---
+LEG SENSOR
+Accel Mag : 1.167 g
+Gyro Mag  : 158.492 °/s
+Raw Accel -> X: -1.069  Y: 0.465  Z: 0.053
+Raw Gyro  -> X: 71.626  Y: 39.702  Z: 135.695
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.987 g
+Gyro Mag  : 24.523 °/s
+Raw Accel -> X: 0.495  Y: 0.760  Z: 0.390
+Raw Gyro  -> X: -19.122  Y: 14.763  Z: -4.214
+---
+LEG SENSOR
+Accel Mag : 0.277 g
+Gyro Mag  : 71.890 °/s
+Raw Accel -> X: -0.207  Y: -0.183  Z: -0.022
+Raw Gyro  -> X: -31.656  Y: -20.282  Z: -61.275
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.801 g
+Gyro Mag  : 19.379 °/s
+Raw Accel -> X: 0.380  Y: 0.574  Z: 0.410
+Raw Gyro  -> X: -15.550  Y: 7.000  Z: 9.206
+---
+LEG SENSOR
+Accel Mag : 0.736 g
+Gyro Mag  : 261.075 °/s
+Raw Accel -> X: -0.730  Y: 0.048  Z: 0.082
+Raw Gyro  -> X: -91.809  Y: -85.076  Z: -229.115
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.853 g
+Gyro Mag  : 4.843 °/s
+Raw Accel -> X: 0.410  Y: 0.596  Z: 0.451
+Raw Gyro  -> X: 3.771  Y: 2.748  Z: 1.298
+---
+LEG SENSOR
+Accel Mag : 2.155 g
+Gyro Mag  : 319.970 °/s
+Raw Accel -> X: -1.869  Y: 1.036  Z: 0.274
+Raw Gyro  -> X: -94.557  Y: -175.702  Z: -250.137
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.127 g
+Gyro Mag  : 30.426 °/s
+Raw Accel -> X: 0.504  Y: 0.782  Z: 0.635
+Raw Gyro  -> X: 26.160  Y: 2.580  Z: 15.321
+---
+LEG SENSOR
+Accel Mag : 1.783 g
+Gyro Mag  : 78.921 °/s
+Raw Accel -> X: -0.977  Y: 1.285  Z: -0.757
+Raw Gyro  -> X: 25.443  Y: 13.931  Z: 73.397
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.232 g
+Gyro Mag  : 31.773 °/s
+Raw Accel -> X: 0.539  Y: 0.973  Z: 0.529
+Raw Gyro  -> X: 18.389  Y: -22.794  Z: 12.321
+---
+LEG SENSOR
+Accel Mag : 0.966 g
+Gyro Mag  : 170.977 °/s
+Raw Accel -> X: -0.952  Y: 0.113  Z: 0.115
+Raw Gyro  -> X: -104.977  Y: 11.031  Z: 134.504
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.948 g
+Gyro Mag  : 21.096 °/s
+Raw Accel -> X: 0.539  Y: 0.683  Z: 0.377
+Raw Gyro  -> X: 11.748  Y: -7.573  Z: 15.802
+---
+LEG SENSOR
+Accel Mag : 0.932 g
+Gyro Mag  : 73.383 °/s
+Raw Accel -> X: -0.870  Y: 0.301  Z: 0.140
+Raw Gyro  -> X: -1.542  Y: 29.618  Z: 67.122
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.982 g
+Gyro Mag  : 22.659 °/s
+Raw Accel -> X: 0.524  Y: 0.719  Z: 0.416
+Raw Gyro  -> X: 17.626  Y: 12.374  Z: -7.046
+---
+LEG SENSOR
+Accel Mag : 0.941 g
+Gyro Mag  : 58.490 °/s
+Raw Accel -> X: -0.885  Y: 0.300  Z: 0.106
+Raw Gyro  -> X: 23.855  Y: 21.534  Z: 48.870
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.964 g
+Gyro Mag  : 12.240 °/s
+Raw Accel -> X: 0.539  Y: 0.712  Z: 0.365
+Raw Gyro  -> X: 1.282  Y: 3.656  Z: -11.611
+---
+LEG SENSOR
+Accel Mag : 0.997 g
+Gyro Mag  : 61.269 °/s
+Raw Accel -> X: -0.923  Y: 0.375  Z: 0.028
+Raw Gyro  -> X: 9.504  Y: 26.916  Z: 54.214
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.030 g
+Gyro Mag  : 13.115 °/s
+Raw Accel -> X: 0.527  Y: 0.761  Z: 0.452
+Raw Gyro  -> X: 0.992  Y: 8.725  Z: -9.740
+---
+LEG SENSOR
+Accel Mag : 1.077 g
+Gyro Mag  : 77.737 °/s
+Raw Accel -> X: -1.013  Y: 0.365  Z: -0.032
+Raw Gyro  -> X: 28.634  Y: 32.168  Z: 64.718
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.169 g
+Gyro Mag  : 55.319 °/s
+Raw Accel -> X: 0.579  Y: 0.925  Z: 0.419
+Raw Gyro  -> X: -26.122  Y: -35.969  Z: -32.924
+---
+LEG SENSOR
+Accel Mag : 1.655 g
+Gyro Mag  : 171.869 °/s
+Raw Accel -> X: -1.612  Y: 0.267  Z: 0.262
+Raw Gyro  -> X: 110.397  Y: 60.679  Z: 116.916
+========================
+========================
+HAND SENSOR
+Accel Mag : 1.033 g
+Gyro Mag  : 46.804 °/s
+Raw Accel -> X: 0.437  Y: 0.773  Z: 0.529
+Raw Gyro  -> X: -37.252  Y: -15.481  Z: 23.733
+---
+LEG SENSOR
+Accel Mag : 0.998 g
+Gyro Mag  : 135.284 °/s
+Raw Accel -> X: -0.885  Y: 0.447  Z: 0.107
+Raw Gyro  -> X: 88.084  Y: 31.863  Z: 97.611
+========================
+========================
+HAND SENSOR
+Accel Mag : 0.974 g
+Gyro Mag  : 29.810 °/s
+Raw Accel -> X: 0.480  Y: 0.729  Z: 0.434
+Raw Gyro  -> X: -29.733  Y: 0.603  Z: 2.053
+---
+LEG SENSOR
+Accel Mag : 0.302 g
+Gyro Mag  : 113.341 °/s
+Raw Accel -> X: -0.254  Y: -0.161  Z: -0.029
+Raw Gyro  -> X: -37.008  Y: -61.565  Z: -87.672
+========================
