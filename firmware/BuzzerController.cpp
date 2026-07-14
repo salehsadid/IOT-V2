@@ -3,8 +3,11 @@
 #include "Config.h"
 #include <Arduino.h>
 
+static const unsigned long RHYTHM_PATTERN[] = {150, 100, 150, 600};
+static const int RHYTHM_STEPS = 4;
+
 BuzzerController::BuzzerController(SystemState* state) 
-    : systemState(state), lastToggleTime(0), buzzerState(false), isAlerting(false) {
+    : systemState(state), lastToggleTime(0), buzzerState(false), isAlerting(false), rhythmIndex(0) {
 }
 
 void BuzzerController::init() {
@@ -28,13 +31,16 @@ void BuzzerController::update() {
             }
         }
 
-        unsigned long currentMillis = millis();
-        unsigned long interval = buzzerState ? Config::BUZZER_ON_TIME_MS : Config::BUZZER_OFF_TIME_MS;
+        if (isAlerting) {
+            unsigned long currentMillis = millis();
+            unsigned long interval = RHYTHM_PATTERN[rhythmIndex];
 
-        if (currentMillis - lastToggleTime >= interval) {
-            lastToggleTime = currentMillis;
-            buzzerState = !buzzerState;
-            digitalWrite(Config::PIN_BUZZER, buzzerState ? HIGH : LOW);
+            if (currentMillis - lastToggleTime >= interval) {
+                lastToggleTime = currentMillis;
+                rhythmIndex = (rhythmIndex + 1) % RHYTHM_STEPS;
+                buzzerState = (rhythmIndex % 2 == 0);
+                digitalWrite(Config::PIN_BUZZER, buzzerState ? HIGH : LOW);
+            }
         }
     } else {
         if (isAlerting) {
@@ -46,15 +52,17 @@ void BuzzerController::update() {
 void BuzzerController::startBuzzer() {
     isAlerting = true;
     buzzerState = true;
+    rhythmIndex = 0;
     lastToggleTime = millis();
     digitalWrite(Config::PIN_BUZZER, HIGH);
     systemState->setCueingActive(true);
-    Logger::info("[BUZZER] FOG Alert Started");
+    Logger::info("[BUZZER] FOG Alert Started (Rhythmic)");
 }
 
 void BuzzerController::stopBuzzer() {
     isAlerting = false;
     buzzerState = false;
+    rhythmIndex = 0;
     digitalWrite(Config::PIN_BUZZER, LOW);
     systemState->setCueingActive(false);
     Logger::info("[BUZZER] FOG Alert Stopped");

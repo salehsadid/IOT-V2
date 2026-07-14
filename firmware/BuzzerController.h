@@ -15,7 +15,8 @@ private:
     unsigned long lastToggleTime;
     bool buzzerState;
     bool isAlerting;
-    
+    int rhythmIndex;
+
     void startBuzzer();
     void stopBuzzer();
 };
