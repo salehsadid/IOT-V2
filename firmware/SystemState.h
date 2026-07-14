@@ -1,5 +1,6 @@
 #pragma once
 
+#include <Arduino.h>
 // Phase 10: Motion State Enum
 enum MotionState {
     REST,
