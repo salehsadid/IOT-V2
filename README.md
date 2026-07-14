@@ -1,107 +1,124 @@
-# ESP32-Based Parkinson's Tremor and Freezing of Gait Monitoring System with Vibration Cueing and Laravel Web Dashboard
+# ESP32-Based Parkinson's Tremor and Freezing of Gait Monitoring System
 
-> **Status:** Phase 0 — Workspace & Environment Setup  
-> **Development Model:** Phase-by-phase. No phase is begun until the previous phase is manually verified and approved.
-
----
-
-## Project Description
-
-A university prototype IoT monitoring and assistance system designed to help caregivers and clinicians observe Parkinson's disease-related motor symptoms in near real-time.
-
-The system detects **hand tremor** and **Freezing of Gait (FOG)** entirely on-device using a rule-based, threshold-based algorithm running on an ESP32 microcontroller. When FOG is detected, the device activates a vibration motor to deliver rhythmic cueing to the patient. All confirmed events are transmitted over Wi-Fi to a Laravel web dashboard accessible by doctors and caregivers.
-
-> ⚠️ This is a university research prototype. It is **not** a certified medical diagnostic device and must not be used as a substitute for clinical judgment.
+> **Comprehensive Project Report & Documentation**
 
 ---
 
-## High-Level Architecture
+## 📖 Project Description
 
-```
-[MPU6050 - Wrist]  ──┐
-                      ├──► [ESP32] ──► Local Tremor Decision
-[MPU6050 - Ankle]  ──┘         │
-                                ├──► Local FOG Decision ──► [Vibration Motor]
-                                ├──► [OLED Display]
-                                └──► Wi-Fi ──► [Laravel API] ──► [MySQL]
-                                                                      │
-                                                          [Blade Dashboard]
-                                                                      │
-                                                     [Doctor / Caregiver Browser]
-                                                                      │
-                                                        Stop Cueing Command
-                                                                      │
-                                                          [Laravel] ──► [ESP32]
-```
+This project is an advanced, prototype IoT medical monitoring system designed to assist caregivers and clinicians in observing Parkinson's disease-related motor symptoms in near real-time. 
+
+The system utilizes an ESP32 microcontroller and dual MPU6050 inertial sensors (accelerometer + gyroscope) to detect two primary symptoms of Parkinson's Disease:
+1. **Resting Tremors** (Hand)
+2. **Freezing of Gait (FOG)** (Legs/Ankle)
+
+All detection logic runs **locally on the ESP32** using threshold-based algorithms. When a FOG event occurs, the system automatically triggers an active buzzer to deliver rhythmic cueing, helping the patient break the freeze. Real-time statuses and historical logs are transmitted over Wi-Fi to a Laravel-based web dashboard, where caregivers can monitor the patient, view statistics, and remotely override the buzzer.
+
+*Note: This is a university research prototype and not a certified medical device.*
 
 ---
 
-## Technology Stack
+## 🚀 Key Features
 
-### Embedded (Patient-Side)
-| Component | Role |
-|---|---|
-| ESP32 | Main microcontroller, Wi-Fi, all decision logic |
-| MPU6050 #1 (wrist) | Tremor monitoring via accelerometer + gyroscope |
-| MPU6050 #2 (ankle) | Gait and Freezing of Gait monitoring |
-| OLED Display | Patient-visible status and alerts |
-| Vibration Motor + Driver | FOG rhythmic cueing |
-
-### Web Application (Doctor/Caregiver-Side)
-| Technology | Role |
-|---|---|
-| Laravel (PHP) | Backend framework, API endpoints, routing |
-| MySQL | Persistent storage of events and logs |
-| Blade Templates | Server-side rendered dashboard views |
-| HTML / CSS | Page structure and styling |
-| JavaScript (basic) | Minimal client-side interactivity only |
-
-### Decision-Making Architecture
-- **All** tremor detection logic runs locally on the ESP32.
-- **All** FOG detection logic runs locally on the ESP32.
-- Detection is **rule-based and threshold-based** — no machine learning, no datasets.
-- Laravel receives and stores **confirmed events** from the ESP32; it does not perform detection.
+- **Dual-Sensor Monitoring:** Simultaneous tracking of hand and leg movements.
+- **On-Device Edge Computing:** FOG and Tremor algorithms execute natively on the ESP32 without relying on cloud processing.
+- **Rhythmic Cueing:** Automatic auditory/vibration feedback to assist patients during a FOG episode.
+- **Live Web Dashboard:** A premium, glassmorphism-styled Laravel dashboard for real-time monitoring and daily statistics.
+- **Remote Alarm Control:** Caregivers can silence the patient's buzzer remotely directly from the web interface.
+- **Telegram Integration:** Instant push notifications sent to caregivers when a critical Tremor or FOG event occurs.
+- **Offline Resilience:** The ESP32 caches data and manages its own state even if the web server temporarily disconnects.
 
 ---
 
-## Development Phases (Planned)
+## 🎯 Objectives
 
-| Phase | Title | Status |
-|---|---|---|
-| 0 | Workspace & Environment Setup | ✅ Completed |
-| 1 | Laravel + MySQL Foundation | ✅ Completed — Laravel 12 in `web/`, MySQL `parkinson_monitor` |
-| 2 | Database Schema + Models | ✅ Completed — 4 domain tables, 5 models, 7 enums, 23 seed events |
-| 3 | Authentication + Doctor/Caregiver Roles | ✅ Completed — Custom Auth, RoleMiddleware, Dashboard |
-| 4 | Laravel Blade Dashboard Foundation | ✅ Completed — Custom CSS Layout, Sidebar, Navbar, Placeholder Cards |
-| 5 | ESP32 Firmware Foundation | ✅ Completed — Arduino IDE Structure, Class Skeletons |
-| 6 | Dual MPU6050 Integration | ✅ Completed — I2C Initialization, AD0 Configuration, Ping Detection |
-| 7 | Tremor Detection Logic | ⬜ Pending |
-| 8 | FOG Detection State Machine | ⬜ Pending |
-| 9 | OLED Integration | ⬜ Pending |
-| 10 | Vibration Cueing | ⬜ Pending |
-| 11 | ESP32 to Laravel API Integration | ⬜ Pending |
-| 12 | Event Logging and Web Alerts | ⬜ Pending |
-| 13 | Remote Cueing Stop | ⬜ Pending |
-| 14 | Full System Integration | ⬜ Pending |
-| 15 | Calibration, Reliability, Testing & Final Audit | ⬜ Pending |
+1. **Continuous Monitoring:** Provide a non-invasive wearable solution for 24/7 symptom tracking.
+2. **Immediate Intervention:** Utilize auditory cueing to actively assist patients in overcoming gait freezing.
+3. **Data Logging for Clinicians:** Store immutable event logs (Duration, Timestamp, Severity Level) to aid doctors in adjusting medication.
+4. **Remote Caregiver Awareness:** Ensure caregivers are immediately notified of emergencies via Telegram and the Live Dashboard.
 
 ---
 
-## Repository Structure (Planned)
+## 🛠 Components Used
 
-```
-project-root/
-├── docs/                   # Planning and architecture documentation
-├── web/                    # Laravel web application (Phase 1+)
-├── firmware/               # ESP32 PlatformIO project (Phase 5+)
-├── README.md
-└── .gitignore
-```
+### Hardware
+- **ESP32 Development Board** (Wi-Fi enabled Microcontroller)
+- **2x MPU6050** (6-DOF Accelerometer and Gyroscope)
+- **0.96" OLED Display** (I2C)
+- **Active Buzzer** (or Vibration Motor)
+- Jumper Wires & Breadboard
+
+### Software & Stack
+- **C++ (Arduino Framework):** Firmware logic, I2C communication, HTTP client.
+- **PHP 8.2 & Laravel 12:** Backend API, Dashboard routing, and Eloquent ORM.
+- **MySQL:** Relational database for historical event logs.
+- **HTML/CSS/Vanilla JS:** Frontend UI utilizing CSS variables and modern glassmorphism.
 
 ---
 
-## Getting Started
+## 🔌 Circuit Diagram & Connections
 
-> Detailed setup instructions will be added as each phase is completed.
+The hardware communicates primarily via the I2C protocol. Because both sensors are identical, the Leg MPU6050's `AD0` pin must be pulled HIGH to assign it a unique I2C address.
 
-For Phase 0, see [`docs/phase-status.md`](docs/phase-status.md) for the current environment checklist.
+| Component | Pin | ESP32 Pin | Notes |
+|---|---|---|---|
+| **OLED Display** | SDA | GPIO 21 | I2C Address `0x3C` |
+| | SCL | GPIO 22 | |
+| **Hand MPU6050** | SDA | GPIO 21 | I2C Address `0x68` (Default) |
+| | SCL | GPIO 22 | |
+| | AD0 | GND | Keeps address at `0x68` |
+| **Leg MPU6050** | SDA | GPIO 21 | I2C Address `0x69` |
+| | SCL | GPIO 22 | |
+| | AD0 | 3.3V | **CRITICAL:** Changes address to `0x69` |
+| **Buzzer** | Signal | GPIO 25 | Active HIGH |
+
+---
+
+## ⚙️ How It Works
+
+### Tremor Detection Algorithm
+The system samples the **Hand MPU6050** every 100ms. It calculates the moving average (MA) of the gyroscope magnitude over a sliding window. 
+- If the Leg MPU detects the patient is walking, Tremor detection is suppressed to prevent false positives from arm swings.
+- If the patient is at rest, the algorithm compares the moving average against 3 severity thresholds.
+- If the threshold is exceeded continuously for **1.5 seconds**, a Tremor Event is confirmed and logged.
+
+### Freezing of Gait (FOG) Algorithm
+The system implements a complex State Machine for the **Leg MPU6050**:
+`REST -> POSSIBLE_WALKING -> WALKING -> POSSIBLE_FOG -> FOG_CONFIRMED -> RECOVERY`
+- When a patient transitions from `WALKING` into a state where leg movement drops below walking thresholds but remains above resting thresholds (trembling/stuttering steps), the state changes to `POSSIBLE_FOG`.
+- If this state persists for 2 seconds, it escalates to `FOG_CONFIRMED`.
+- Cueing (Buzzer) is instantly activated.
+
+### Web & API Communication
+- **Heartbeat:** The ESP32 sends a JSON POST request to the Laravel `/api/heartbeat` endpoint every 5 seconds (or instantly on state change).
+- **Event Logging:** Once an event concludes, its full duration and max severity are POSTed to `/api/events`.
+- **Remote Control:** The dashboard writes a `STOP_BUZZER` command to the Laravel Cache. The ESP32 pulls this command during its next heartbeat and silences the hardware buzzer.
+
+---
+
+## 🚀 Further Implementation
+
+This prototype establishes a strong foundation, but can be expanded in the future:
+1. **Machine Learning Integration:** Replacing the threshold-based algorithm with a TinyML model (e.g., TensorFlow Lite for Microcontrollers) trained on actual patient datasets.
+2. **Mobile App:** Developing a Flutter/React Native application via the existing Laravel APIs for better caregiver mobility.
+3. **Wi-Fi Manager (Captive Portal):** Implementing `WiFiManager.h` so the SSID and Password can be configured via a smartphone without recompiling the firmware.
+4. **OTA Updates:** Allowing over-the-air firmware updates from the Laravel dashboard.
+
+---
+
+## 📚 References & Documentation
+
+- **[System Architecture Document](architecture.md)** — Detailed flowcharts, sequence diagrams, and module responsibilities.
+- **[Hardware Wiring Guide](hardware-wiring.md)** — Complete pin mappings, I2C explanations, and physical setup instructions.
+- **MPU6050 Datasheet:** InvenSense MPU-6000 and MPU-6050 Product Specification.
+- **ESP32 Documentation:** Espressif IoT Development Framework.
+- **Laravel 12 Documentation:** https://laravel.com/docs/12.x
+- **Parkinson's FOG Research:** Clinical studies on rhythmic auditory and vibrotactile cueing for Freezing of Gait intervention.
+
+---
+
+## 🛠️ User Guide
+
+For a complete, step-by-step guide on how to install, configure, simulate, and troubleshoot this project, please read the:
+
+👉 **[HOW TO USE & SIMULATE GUIDE](HOW_TO_USE.md)**

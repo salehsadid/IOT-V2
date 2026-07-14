@@ -17,7 +17,7 @@ public:
     
     // Phase 9 Refinement Constants
     static constexpr uint8_t TREMOR_MA_WINDOW_SIZE = 5; // Samples
-    static constexpr uint8_t TREMOR_CONFIRMATION_COUNT = 3; // Samples
+    static constexpr uint8_t TREMOR_CONFIRMATION_COUNT = 15; // Increased from 3 to 15 to ignore short normal movements
     static constexpr float TREMOR_HYSTERESIS = 5.0; // °/s
     static constexpr float TREMOR_WALKING_MULTIPLIER = 1.5; // Threshold modifier during walking
 

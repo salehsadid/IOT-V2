@@ -33,4 +33,23 @@ class DashboardController extends Controller
         
         return view('dashboard.index', compact('user', 'patient', 'age', 'stats'));
     }
+
+    public function updatePatient(Request $request)
+    {
+        $validated = $request->validate([
+            'full_name' => 'required|string|max:255',
+            'date_of_birth' => 'required|date',
+        ]);
+
+        $patient = Patient::where('patient_code', 'PKN-0001')->first();
+        if ($patient) {
+            $patient->update([
+                'full_name' => $validated['full_name'],
+                'date_of_birth' => $validated['date_of_birth'],
+            ]);
+            return back()->with('success', 'Patient details updated successfully!');
+        }
+
+        return back()->with('error', 'Patient not found.');
+    }
 }

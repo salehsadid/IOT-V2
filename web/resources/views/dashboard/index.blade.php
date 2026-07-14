@@ -172,12 +172,16 @@
 
     <div class="container">
         <!-- Patient Profile -->
-        <div class="card">
+        <div class="card" style="position: relative;">
             <h2>Patient Profile</h2>
+            @if(session('success'))
+                <div style="background: rgba(34, 197, 94, 0.15); color: #16a34a; padding: 10px; border-radius: 8px; margin-bottom: 15px; font-size: 14px; border: 1px solid #4ade80;">{{ session('success') }}</div>
+            @endif
             @if($patient)
                 <div class="info-row"><strong>Name:</strong> {{ $patient->full_name }}</div>
                 <div class="info-row"><strong>Age:</strong> {{ $age }} years</div>
-                <div class="info-row"><strong>DOB:</strong> {{ $patient->date_of_birth }}</div>
+                <div class="info-row"><strong>DOB:</strong> {{ $patient->date_of_birth->format('Y-M-d') }}</div>
+                <button onclick="document.getElementById('edit-patient-modal').style.display='flex'" style="position: absolute; top: 25px; right: 25px; background: none; border: none; color: var(--brand-color); cursor: pointer; font-weight: 600; font-family: 'Inter', sans-serif;">✏️ Edit</button>
             @else
                 <p>Patient data not found.</p>
             @endif
@@ -200,7 +204,7 @@
                     <div id="ui-leg" class="status-badge status-off">N/A</div>
                 </div>
             </div>
-            <p style="text-align:center; font-size:12px; color:var(--text-muted); margin-top:0;">Syncing every 3 seconds...</p>
+            <p style="text-align:center; font-size:12px; color:var(--text-muted); margin-top:0;">Syncing every 1 second...</p>
         </div>
 
         <!-- Tremor Status -->
@@ -264,6 +268,28 @@
             <h1 id="alert-title">CRITICAL ALERT</h1>
             <p id="alert-message">A medical event is happening.</p>
             <button class="btn" onclick="document.getElementById('alert-modal').style.display='none'">Dismiss Alert</button>
+        </div>
+    </div>
+
+    <!-- Edit Patient Modal -->
+    <div id="edit-patient-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); z-index: 1000; justify-content: center; align-items: center;">
+        <div class="modal-content" style="border: 1px solid var(--border-color); animation: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+            <h2 style="color: var(--text-main); margin-top: 0; border-bottom: 1px solid var(--border-color); padding-bottom: 15px;">Edit Patient Details</h2>
+            <form action="{{ route('patient.update') }}" method="POST" style="text-align: left; display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+                @csrf
+                <div>
+                    <label style="color: var(--text-muted); font-size: 14px; font-weight: 600;">Full Name</label><br>
+                    <input type="text" name="full_name" value="{{ $patient ? $patient->full_name : '' }}" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-main); font-family: 'Inter', sans-serif; box-sizing: border-box; margin-top: 5px;">
+                </div>
+                <div>
+                    <label style="color: var(--text-muted); font-size: 14px; font-weight: 600;">Date of Birth</label><br>
+                    <input type="date" name="date_of_birth" value="{{ $patient ? $patient->date_of_birth->format('Y-m-d') : '' }}" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-main); font-family: 'Inter', sans-serif; box-sizing: border-box; margin-top: 5px;">
+                </div>
+                <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 15px;">
+                    <button type="button" class="btn" style="background: var(--text-muted); color: #fff;" onclick="document.getElementById('edit-patient-modal').style.display='none'">Cancel</button>
+                    <button type="submit" class="btn" style="background: var(--brand-color); color: #fff;">Save Changes</button>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -384,8 +410,8 @@
             });
         }
 
-        // Poll every 3 seconds
-        setInterval(fetchLiveStatus, 3000);
+        // Poll every 1 second for faster real-time experience
+        setInterval(fetchLiveStatus, 1000);
         // Initial fetch
         fetchLiveStatus();
     </script>

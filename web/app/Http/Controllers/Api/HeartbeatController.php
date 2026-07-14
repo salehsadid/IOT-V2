@@ -24,14 +24,28 @@ class HeartbeatController extends Controller
         // Get previous status to detect transitions
         $prevStatus = Cache::get($cacheKey);
 
+        $patient = \App\Models\Patient::first();
+        $age = $patient && $patient->date_of_birth ? \Carbon\Carbon::parse($patient->date_of_birth)->age : 'Unknown';
+        $name = $patient ? $patient->full_name : 'Unknown';
+        $time = now()->format('Y-m-d h:i A');
+
         // Check for new Tremor
         if ($validated['tremor_level'] > 0 && (!$prevStatus || $prevStatus['tremor_level'] == 0)) {
-            \App\Services\TelegramService::sendAlert("Patient is experiencing a Tremor! (Level {$validated['tremor_level']})");
+            $msg = "👤 *Patient:* {$name}\n";
+            $msg .= "🎂 *Age:* {$age} years\n";
+            $msg .= "🫨 *Event:* TREMOR DETECTED\n";
+            $msg .= "📈 *Level:* {$validated['tremor_level']}\n";
+            $msg .= "⏰ *Start Time:* {$time}";
+            \App\Services\TelegramService::sendAlert($msg);
         }
 
         // Check for new FOG
         if ($validated['fog_active'] && (!$prevStatus || !$prevStatus['fog_active'])) {
-            \App\Services\TelegramService::sendAlert("Patient is experiencing Freezing of Gait (FOG)!");
+            $msg = "👤 *Patient:* {$name}\n";
+            $msg .= "🎂 *Age:* {$age} years\n";
+            $msg .= "🚶 *Event:* FOG DETECTED (Freezing of Gait)\n";
+            $msg .= "⏰ *Start Time:* {$time}";
+            \App\Services\TelegramService::sendAlert($msg);
         }
 
         // Store the live status in cache for 15 seconds. If ESP32 dies, this expires.

@@ -52,15 +52,24 @@ float DetectionManager::getMovingAverage(const float* buffer, uint8_t size) {
 }
 
 void DetectionManager::detectTremor() {
-    float handAvg = getMovingAverage(handGyroBuffer, Config::TREMOR_MA_WINDOW_SIZE);
-    float legAvg = getMovingAverage(legGyroBuffer, Config::TREMOR_MA_WINDOW_SIZE);
+    MotionState currentState = systemState->getMotionState();
+    
+    // As per user request: Do not detect tremor while walking, only at rest
+    if (currentState != REST) {
+        if (systemState->getTremorLevel() != 0) {
+            systemState->setTremorLevel(0);
+        }
+        pendingTremorLevel = 0;
+        confirmationCounter = 0;
+        return;
+    }
 
-    float multiplier = (legAvg > Config::LEG_WALKING_THRESHOLD) ? Config::TREMOR_WALKING_MULTIPLIER : 1.0f;
+    float handAvg = getMovingAverage(handGyroBuffer, Config::TREMOR_MA_WINDOW_SIZE);
     
     uint8_t evaluatedLevel = 0;
-    float thresh3 = Config::TREMOR_LEVEL_3_THRESHOLD * multiplier;
-    float thresh2 = Config::TREMOR_LEVEL_2_THRESHOLD * multiplier;
-    float thresh1 = Config::TREMOR_LEVEL_1_THRESHOLD * multiplier;
+    float thresh3 = Config::TREMOR_LEVEL_3_THRESHOLD;
+    float thresh2 = Config::TREMOR_LEVEL_2_THRESHOLD;
+    float thresh1 = Config::TREMOR_LEVEL_1_THRESHOLD;
     
     // Hysteresis: lower the threshold if we are already at or above that pending level
     if (handAvg >= (pendingTremorLevel >= 3 ? thresh3 - Config::TREMOR_HYSTERESIS : thresh3)) {
@@ -91,7 +100,7 @@ void DetectionManager::detectTremor() {
             }
             
             systemState->setTremorLevel(newLevel);
-            Logger::info("[Tremor] Level changed to: " + String(newLevel) + " | Target: " + String(pendingTremorLevel) + " | HandAvg: " + String(handAvg, 1) + " | LegAvg: " + String(legAvg, 1));
+            Logger::info("[Tremor] Level changed to: " + String(newLevel) + " | Target: " + String(pendingTremorLevel) + " | HandAvg: " + String(handAvg, 1));
             
             // Require new confirmations to take the next smooth step if target is still further away
             confirmationCounter = 0;

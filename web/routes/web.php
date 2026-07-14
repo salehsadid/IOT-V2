@@ -20,4 +20,5 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 // Protected routes
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::post('/patient/update', [DashboardController::class, 'updatePatient'])->name('patient.update');
 });

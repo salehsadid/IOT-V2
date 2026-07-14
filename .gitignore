@@ -167,9 +167,15 @@ phpunit.xml
 # These must remain tracked for project bootstrapping and collaboration:
 #   .env.example          — Laravel environment template
 #   firmware/platformio.ini — PlatformIO project config
-#   docs/                 — All documentation
 #   README.md             — Project readme
 # =============================================================================
 !.env.example
 !web/.env.example
 !firmware/platformio.ini
+
+# =============================================================================
+# DOCS AND MARKDOWN FILES
+# =============================================================================
+docs/
+*.md
+!README.md
