@@ -179,3 +179,6 @@ phpunit.xml
 docs/
 *.md
 !README.md
+!hardware-wiring.md
+!architecture.md
+!HOW_TO_USE.md
