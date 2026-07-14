@@ -28,7 +28,6 @@ class DetectionEventsSeeder extends Seeder
 {
     public function run(): void
     {
-        // Map patient_code to device_uid for clarity
         $assignments = [
             'PKN-0001' => 'ESP32-A1B2C3D4',
             'PKN-0002' => 'ESP32-E5F6A7B8',
@@ -37,91 +36,60 @@ class DetectionEventsSeeder extends Seeder
             'PKN-0005' => 'ESP32-K7L8M9N0',
         ];
 
-        // Event definitions per patient — realistic clinical scenarios
         $eventPlan = [
             'PKN-0001' => [
-                // Ahmad — moderate tremor patient
-                ['type' => EventType::Tremor, 'level' => TremorLevel::Mild,     'days_ago' => 13, 'cue' => false],
-                ['type' => EventType::Tremor, 'level' => TremorLevel::Moderate,  'days_ago' => 11, 'cue' => false],
-                ['type' => EventType::Tremor, 'level' => TremorLevel::Mild,     'days_ago' => 9,  'cue' => false],
-                ['type' => EventType::Tremor, 'level' => TremorLevel::Severe,    'days_ago' => 7,  'cue' => false],
-                ['type' => EventType::Tremor, 'level' => TremorLevel::Moderate,  'days_ago' => 3,  'cue' => false],
+                ['type' => 'TREMOR', 'max_level' => 1, 'duration' => 5000, 'days_ago' => 13],
+                ['type' => 'TREMOR', 'max_level' => 2, 'duration' => 12000, 'days_ago' => 11],
+                ['type' => 'TREMOR', 'max_level' => 1, 'duration' => 3000, 'days_ago' => 9],
+                ['type' => 'TREMOR', 'max_level' => 3, 'duration' => 25000, 'days_ago' => 7],
             ],
             'PKN-0002' => [
-                // Fatimah — tremor + FOG
-                ['type' => EventType::Tremor, 'level' => TremorLevel::Mild,     'days_ago' => 12, 'cue' => false],
-                ['type' => EventType::Fog,    'level' => null,                  'days_ago' => 10, 'cue' => true,  'cue_duration' => 45],
-                ['type' => EventType::Tremor, 'level' => TremorLevel::Moderate,  'days_ago' => 8,  'cue' => false],
-                ['type' => EventType::Fog,    'level' => null,                  'days_ago' => 5,  'cue' => true,  'cue_duration' => 62],
-                ['type' => EventType::Tremor, 'level' => TremorLevel::Mild,     'days_ago' => 2,  'cue' => false],
+                ['type' => 'TREMOR', 'max_level' => 1, 'duration' => 4500, 'days_ago' => 12],
+                ['type' => 'FOG',    'max_level' => null, 'duration' => 45000, 'days_ago' => 10],
+                ['type' => 'TREMOR', 'max_level' => 2, 'duration' => 8000, 'days_ago' => 8],
+                ['type' => 'FOG',    'max_level' => null, 'duration' => 62000, 'days_ago' => 5],
             ],
             'PKN-0003' => [
-                // Thomas — advanced, frequent FOG
-                ['type' => EventType::Fog,    'level' => null,                  'days_ago' => 14, 'cue' => true,  'cue_duration' => 90],
-                ['type' => EventType::Fog,    'level' => null,                  'days_ago' => 12, 'cue' => true,  'cue_duration' => 120],
-                ['type' => EventType::Tremor, 'level' => TremorLevel::Moderate,  'days_ago' => 10, 'cue' => false],
-                ['type' => EventType::Fog,    'level' => null,                  'days_ago' => 7,  'cue' => true,  'cue_duration' => 75],
-                ['type' => EventType::Fog,    'level' => null,                  'days_ago' => 4,  'cue' => true,  'cue_stopped' => false], // still active
-                ['type' => EventType::Tremor, 'level' => TremorLevel::Severe,    'days_ago' => 1,  'cue' => false],
+                ['type' => 'FOG',    'max_level' => null, 'duration' => 90000, 'days_ago' => 14],
+                ['type' => 'FOG',    'max_level' => null, 'duration' => 120000, 'days_ago' => 12],
+                ['type' => 'TREMOR', 'max_level' => 2, 'duration' => 10000, 'days_ago' => 10],
+                ['type' => 'FOG',    'max_level' => null, 'duration' => 75000, 'days_ago' => 7],
+                ['type' => 'TREMOR', 'max_level' => 3, 'duration' => 15000, 'days_ago' => 1],
             ],
             'PKN-0004' => [
-                // Rosmah — early stage, mild tremor only
-                ['type' => EventType::Tremor, 'level' => TremorLevel::Mild,     'days_ago' => 10, 'cue' => false],
-                ['type' => EventType::Tremor, 'level' => TremorLevel::Mild,     'days_ago' => 6,  'cue' => false],
-                ['type' => EventType::Tremor, 'level' => TremorLevel::Mild,     'days_ago' => 2,  'cue' => false],
+                ['type' => 'TREMOR', 'max_level' => 1, 'duration' => 2000, 'days_ago' => 10],
+                ['type' => 'TREMOR', 'max_level' => 1, 'duration' => 3500, 'days_ago' => 6],
             ],
             'PKN-0005' => [
-                // Lim — moderate tremor, occasional FOG
-                ['type' => EventType::Tremor, 'level' => TremorLevel::Moderate,  'days_ago' => 11, 'cue' => false],
-                ['type' => EventType::Fog,    'level' => null,                  'days_ago' => 9,  'cue' => true,  'cue_duration' => 55],
-                ['type' => EventType::Tremor, 'level' => TremorLevel::Severe,    'days_ago' => 6,  'cue' => false],
-                ['type' => EventType::Tremor, 'level' => TremorLevel::Moderate,  'days_ago' => 3,  'cue' => false],
+                ['type' => 'TREMOR', 'max_level' => 2, 'duration' => 11000, 'days_ago' => 11],
+                ['type' => 'FOG',    'max_level' => null, 'duration' => 55000, 'days_ago' => 9],
+                ['type' => 'TREMOR', 'max_level' => 3, 'duration' => 21000, 'days_ago' => 6],
             ],
         ];
 
         $total = 0;
 
         foreach ($eventPlan as $patientCode => $events) {
-            $patient = Patient::where('patient_code', $patientCode)->first();
-            $device  = Device::where('device_uid', $assignments[$patientCode])->first();
-
-            if (! $patient || ! $device) {
-                $this->command->warn("  ⚠ Missing patient/device for {$patientCode}. Skipping events.");
-                continue;
-            }
+            $device_id = $assignments[$patientCode];
 
             foreach ($events as $index => $event) {
-                // Spread events across the day (morning–evening hours)
                 $baseHour  = 7 + ($index * 2) % 14;
-                $detectedAt = Carbon::now()
+                $endTime = Carbon::now()
                     ->subDays($event['days_ago'])
                     ->setHour($baseHour)
                     ->setMinute(rand(0, 59))
                     ->setSecond(rand(0, 59));
-
-                $receivedAt     = $detectedAt->copy()->addSeconds(rand(1, 8));
-                $cueingActivated = $event['cue'] ?? false;
-
-                $cueingStoppedAt = null;
-                if ($cueingActivated) {
-                    $stopped = $event['cue_stopped'] ?? true;
-                    if ($stopped && isset($event['cue_duration'])) {
-                        $cueingStoppedAt = $detectedAt->copy()->addSeconds($event['cue_duration']);
-                    }
-                    // If cue_stopped = false, cueing is still active (null stays null)
-                }
+                
+                $startTime = $endTime->copy()->subMilliseconds($event['duration']);
 
                 DetectionEvent::create([
-                    'event_uuid'         => (string) Str::uuid(),
-                    'patient_id'         => $patient->id,
-                    'device_id'          => $device->id,
-                    'event_type'         => $event['type']->value,
-                    'tremor_level'       => $event['level']?->value,
-                    'device_detected_at' => $detectedAt,
-                    'server_received_at' => $receivedAt,
-                    'cueing_activated'   => $cueingActivated,
-                    'cueing_stopped_at'  => $cueingStoppedAt,
-                    'metadata'           => $this->buildMetadata($event['type']),
+                    'device_id'   => $device_id,
+                    'event_type'  => $event['type'],
+                    'start_level' => $event['type'] === 'TREMOR' ? 1 : null,
+                    'max_level'   => $event['max_level'],
+                    'duration_ms' => $event['duration'],
+                    'start_time'  => $startTime,
+                    'end_time'    => $endTime,
                 ]);
 
                 $total++;
@@ -129,20 +97,5 @@ class DetectionEventsSeeder extends Seeder
         }
 
         $this->command->info("  ✔ Detection events seeded: {$total} events across 5 patients.");
-    }
-
-    /**
-     * Build realistic metadata for seeded events.
-     * Includes sample values that future firmware versions may report.
-     */
-    private function buildMetadata(EventType $type): array
-    {
-        return [
-            'firmware_version'  => '1.0.0',
-            'rms_value'         => round(rand(100, 500) / 100, 3),
-            'motion_score'      => round(rand(20, 95) / 1, 1),
-            'sensor_placement'  => $type === EventType::Fog ? 'ankle' : 'wrist',
-            'calibration_ver'   => 'cal-v1',
-        ];
     }
 }

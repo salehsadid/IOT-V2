@@ -266,14 +266,17 @@
 
 ---
 
-## Phase 13 — ESP32 ↔ Laravel API Communication
+## Phase 13 — ESP32 -> Laravel Event Logging & History
 
-**Status:** ⬜ Not Started
+**Status:** ✅ Completed
 
-### Planned Objectives
-- Implement Laravel API endpoints for events and commands.
-- Implement ESP32 HTTP client.
-- Test round-trip: ESP32 event → MySQL storage → API response.
+### Objectives Achieved
+- [x] Implemented `ApiClient` in ESP32 firmware for non-blocking WiFi connection and HTTP POST requests.
+- [x] Configured the ESP32 to upload ONLY confirmed `TREMOR` and `FOG` events (using `duration_ms` logic).
+- [x] Rewrote Laravel `DetectionEvent` model and migration to track `start_level` and `max_level` for Tremor events.
+- [x] Created `Api\EventController` to validate JSON payload, calculate `start_time` and `end_time` dynamically, and save to MySQL.
+- [x] Developed `HistoryController` and a custom Blade template (`resources/views/history.blade.php`) to view paginated historical data.
+- [x] Confirmed WiFi connection loss does NOT crash or halt core offline detection.
 
 ---
 

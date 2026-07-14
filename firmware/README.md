@@ -28,6 +28,12 @@ The **Phase 12** firmware introduces an active buzzer system designed explicitly
 - **Non-Blocking Architecture**: The buzzer toggle is driven by `millis()`, ensuring that I2C sensor reads, motion state calculations, and OLED screen updates continue flawlessly without any CPU freezing.
 - **Instant Recovery**: The moment the user resumes walking and triggers the `RECOVERY` state, the buzzer shuts off.
 
+## Phase 13 - Cloud Sync & Backend Logging
+The **Phase 13** update transforms the system from a localized offline prototype into an IoT cloud device.
+- **Dedicated ApiClient**: A custom, non-blocking HTTP module parses and uploads events exactly the moment they conclude. 
+- **Bandwidth Efficiency**: It does *not* upload continuous telemetry data. It exclusively uploads confirmed `TREMOR` and `FOG` events.
+- **Smart Timekeeping**: The ESP32 tracks the peak severity (`max_level`) and total length (`duration_ms`) of an event, allowing the Laravel backend to retroactively generate standard ISO timestamps without requiring an RTC module on the hardware.
+
 ### Required Libraries
 To compile this firmware, you must install the following libraries via the Arduino Library Manager:
 - **Adafruit GFX Library**
