@@ -17,19 +17,17 @@ private:
     unsigned long lastWifiCheckTime;
     unsigned long lastHeartbeatTime;
 
-    // Tremor tracking
     bool inTremorEvent;
     unsigned long tremorStartTime;
     uint8_t currentStartLevel;
     uint8_t currentMaxLevel;
 
-    // FOG tracking
     bool inFogEvent;
     unsigned long fogStartTime;
 
     void connectWiFi();
     void checkWiFiConnection();
-    
+
     void uploadTremorEvent(uint8_t startLvl, uint8_t maxLvl, unsigned long durationMs);
     void uploadFogEvent(unsigned long durationMs);
     void sendHeartbeat();

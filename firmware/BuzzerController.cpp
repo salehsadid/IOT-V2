@@ -12,10 +12,10 @@ BuzzerController::BuzzerController(SystemState* state)
 
 void BuzzerController::init() {
     Logger::info("Initializing BuzzerController on pin " + String(Config::PIN_BUZZER));
-    
+
     pinMode(Config::PIN_BUZZER, OUTPUT);
     digitalWrite(Config::PIN_BUZZER, LOW);
-    
+
     Logger::info("BuzzerController initialization complete.");
 }
 

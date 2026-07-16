@@ -18,7 +18,7 @@ void ApiClient::init() {
 void ApiClient::connectWiFi() {
     String ssid = Config::getWifiSSID();
     String pass = Config::getWifiPass();
-    
+
     if (ssid == "PLACEHOLDER_SSID" || ssid == "") {
         Logger::error("WiFi SSID not configured. Skipping WiFi connect.");
         if (systemState) systemState->setWifiConnected(false);
@@ -27,8 +27,7 @@ void ApiClient::connectWiFi() {
 
     Logger::info("Connecting to WiFi: " + ssid);
     WiFi.begin(ssid.c_str(), pass.c_str());
-    
-    // Non-blocking WiFi connection is handled in update() via WiFi.status() checks.
+
 }
 
 void ApiClient::checkWiFiConnection() {
@@ -41,7 +40,6 @@ void ApiClient::checkWiFiConnection() {
 void ApiClient::update() {
     unsigned long currentMillis = millis();
 
-    // Reconnect logic
     if (currentMillis - lastWifiCheckTime >= 5000) {
         lastWifiCheckTime = currentMillis;
         checkWiFiConnection();
@@ -59,7 +57,6 @@ void ApiClient::update() {
         sendHeartbeat();
     }
 
-    // --- Tremor Tracking ---
     uint8_t currentTremor = systemState->getTremorLevel();
     if (currentTremor > 0) {
         if (!inTremorEvent) {
@@ -82,14 +79,13 @@ void ApiClient::update() {
         }
     }
 
-    // --- FOG Tracking ---
     bool currentFog = systemState->isFogActive();
     if (currentFog) {
         if (!inFogEvent) {
             inFogEvent = true;
             fogStartTime = currentMillis;
             Logger::info("[API] FOG event started - Forcing immediate heartbeat");
-            sendHeartbeat(); // Force immediate update to web UI!
+            sendHeartbeat(); 
             lastHeartbeatTime = currentMillis;
         }
     } else {
@@ -98,14 +94,14 @@ void ApiClient::update() {
             unsigned long duration = currentMillis - fogStartTime;
             Logger::info("[API] FOG event ended. Duration: " + String(duration) + " ms");
             uploadFogEvent(duration);
-            sendHeartbeat(); // Force update to clear web UI
+            sendHeartbeat(); 
             lastHeartbeatTime = currentMillis;
         }
     }
 }
 
 void ApiClient::uploadTremorEvent(uint8_t startLvl, uint8_t maxLvl, unsigned long durationMs) {
-    // Simple JSON construction without needing ArduinoJson library
+
     String payload = "{";
     payload += "\"device_id\":\"ESP32-A1B2C3D4\",";
     payload += "\"event_type\":\"TREMOR\",";
@@ -113,7 +109,7 @@ void ApiClient::uploadTremorEvent(uint8_t startLvl, uint8_t maxLvl, unsigned lon
     payload += "\"max_level\":" + String(maxLvl) + ",";
     payload += "\"duration_ms\":" + String(durationMs);
     payload += "}";
-    
+
     sendPostRequest(payload);
 }
 
@@ -123,7 +119,7 @@ void ApiClient::uploadFogEvent(unsigned long durationMs) {
     payload += "\"event_type\":\"FOG\",";
     payload += "\"duration_ms\":" + String(durationMs);
     payload += "}";
-    
+
     sendPostRequest(payload);
 }
 
@@ -167,7 +163,7 @@ bool ApiClient::sendPostRequest(String payload) {
 
 void ApiClient::sendHeartbeat() {
     if (WiFi.status() != WL_CONNECTED) return;
-    
+
     String payload = "{";
     payload += "\"device_id\":\"ESP32-A1B2C3D4\",";
     payload += "\"hand_ok\":" + String(systemState->isHandSensorReady() ? "true" : "false") + ",";
@@ -175,12 +171,12 @@ void ApiClient::sendHeartbeat() {
     payload += "\"tremor_level\":" + String(systemState->getTremorLevel()) + ",";
     payload += "\"fog_active\":" + String(systemState->isFogActive() ? "true" : "false");
     payload += "}";
-    
+
     String serverUrl = Config::getServerUrl() + "/api/heartbeat";
     HTTPClient http;
     http.begin(serverUrl);
     http.addHeader("Content-Type", "application/json");
-    
+
     int httpResponseCode = http.POST(payload);
     if (httpResponseCode > 0) {
         String response = http.getString();

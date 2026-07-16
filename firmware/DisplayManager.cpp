@@ -13,7 +13,7 @@ DisplayManager::DisplayManager(SystemState* state)
 
 void DisplayManager::init() {
     Logger::info("Initializing DisplayManager at address 0x" + String(Config::ADDR_OLED, HEX));
-    
+
     if(!display.begin(SSD1306_SWITCHCAPVCC, Config::ADDR_OLED)) {
         Logger::error("SSD1306 allocation failed or device not found");
         if (systemState != nullptr) {
@@ -21,18 +21,18 @@ void DisplayManager::init() {
         }
         return;
     }
-    
+
     if (systemState != nullptr) {
         systemState->setOledReady(true);
     }
-    
+
     display.clearDisplay();
     display.setTextColor(SSD1306_WHITE);
     drawBootScreen();
     display.display();
-    
+
     Logger::info("DisplayManager initialization complete.");
-    delay(2000); // Hold boot screen briefly
+    delay(2000); 
 }
 
 void DisplayManager::update() {
@@ -41,17 +41,16 @@ void DisplayManager::update() {
     unsigned long currentMillis = millis();
     if (currentMillis - lastRefreshTime >= Config::OLED_REFRESH_INTERVAL) {
         lastRefreshTime = currentMillis;
-        
-        // Determine correct screen state
+
         if (!systemState->isHandSensorReady() || !systemState->isLegSensorReady()) {
             currentScreen = SCREEN_ERROR;
         } else if (systemState->getTremorLevel() > 0 || systemState->isFogActive()) {
             if (currentScreen != SCREEN_ALERT) {
-                alertStartTime = currentMillis; // Just entered alert
+                alertStartTime = currentMillis; 
             }
             currentScreen = SCREEN_ALERT;
         } else if (currentScreen == SCREEN_ALERT) {
-            // We were in alert, check if duration expired
+
             if (currentMillis - alertStartTime >= Config::OLED_ALERT_DURATION) {
                 currentScreen = SCREEN_NORMAL;
             }
@@ -60,7 +59,7 @@ void DisplayManager::update() {
         }
 
         display.clearDisplay();
-        
+
         switch (currentScreen) {
             case SCREEN_BOOT:
                 drawBootScreen();
@@ -75,7 +74,7 @@ void DisplayManager::update() {
                 drawErrorScreen();
                 break;
         }
-        
+
         display.display();
     }
 }
@@ -92,15 +91,13 @@ void DisplayManager::drawBootScreen() {
 
 void DisplayManager::drawNormalScreen() {
     display.setTextSize(1);
-    
-    // Line 1: Sensors
+
     display.setCursor(0, 0);
     display.print("Hand:");
     display.print(systemState->isHandSensorReady() ? "OK" : "ERR");
     display.print(" Leg:");
     display.print(systemState->isLegSensorReady() ? "OK" : "ERR");
-    
-    // Line 2: Motion
+
     display.setCursor(0, 20);
     display.print("Motion: ");
     MotionState ms = systemState->getMotionState();
@@ -112,8 +109,7 @@ void DisplayManager::drawNormalScreen() {
         case FOG_CONFIRMED: display.print("FOG"); break;
         case RECOVERY: display.print("RECOVERY"); break;
     }
-    
-    // Line 3: Tremor
+
     display.setCursor(0, 40);
     display.print("Tremor: Level ");
     display.print(systemState->getTremorLevel());
@@ -121,7 +117,7 @@ void DisplayManager::drawNormalScreen() {
 
 void DisplayManager::drawAlertScreen() {
     display.setTextSize(2);
-    
+
     if (systemState->isFogActive()) {
         display.setCursor(25, 15);
         display.print("FOG");
@@ -140,12 +136,12 @@ void DisplayManager::drawErrorScreen() {
     display.setTextSize(1);
     display.setCursor(10, 10);
     display.print("SENSOR ERROR!");
-    
+
     display.setCursor(10, 30);
     if (!systemState->isHandSensorReady()) {
         display.print("- Hand MPU Missing");
     }
-    
+
     display.setCursor(10, 45);
     if (!systemState->isLegSensorReady()) {
         display.print("- Leg MPU Missing");

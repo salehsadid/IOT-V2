@@ -1,7 +1,7 @@
 #pragma once
 
 #include <Arduino.h>
-// Phase 10: Motion State Enum
+
 enum MotionState {
     REST,
     POSSIBLE_WALKING,
@@ -15,7 +15,6 @@ class SystemState {
 public:
     SystemState();
 
-    // Setters
     void setWifiConnected(bool connected);
     void setHandSensorReady(bool ready);
     void setLegSensorReady(bool ready);
@@ -24,18 +23,15 @@ public:
     void setCueingActive(bool active);
     void setRemoteBuzzerStop(bool stop);
 
-    // Sensor Magnitude Setters
     void setHandAccelMagnitude(float mag);
     void setHandGyroMagnitude(float mag);
     void setLegAccelMagnitude(float mag);
     void setLegGyroMagnitude(float mag);
 
-    // Detection State Setters
     void setTremorLevel(uint8_t level);
     void setMotionState(MotionState state);
     void setFogActive(bool active);
 
-    // Getters
     bool isWifiConnected() const;
     bool isHandSensorReady() const;
     bool isLegSensorReady() const;
@@ -43,13 +39,11 @@ public:
     bool isServerConnected() const;
     bool isCueingActive() const;
     bool getRemoteBuzzerStop() const;
-    
-    // Detection State Getters
+
     uint8_t getTremorLevel() const;
     MotionState getMotionState() const;
     bool isFogActive() const;
-    
-    // Sensor Magnitude Getters
+
     float getHandAccelMagnitude() const;
     float getHandGyroMagnitude() const;
     float getLegAccelMagnitude() const;
@@ -63,13 +57,13 @@ private:
     bool serverConnected;
     bool cueingActive;
     bool remoteBuzzerStop;
-    
+
     float handAccelMag;
     float handGyroMag;
     float legAccelMag;
     float legGyroMag;
-    
-    uint8_t currentTremorLevel; // 0=None, 1=Mild, 2=Moderate, 3=Severe
+
+    uint8_t currentTremorLevel; 
     MotionState currentMotionState;
     bool fogActive;
 };

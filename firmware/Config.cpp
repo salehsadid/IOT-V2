@@ -1,7 +1,5 @@
 #include "Config.h"
 
-// If secrets.h exists, it would be included here.
-// For the repository, we just use placeholder values in case secrets.h is missing.
 #if __has_include("secrets.h")
 #include "secrets.h"
 #else
@@ -12,7 +10,7 @@
 #endif
 
 void Config::init() {
-    // Future initialization if needed (e.g., reading from EEPROM or NVS)
+
 }
 
 String Config::getWifiSSID() {

@@ -8,10 +8,10 @@ public:
 
     void init();
     void update();
-    
+
 private:
     SystemState* systemState;
-    
+
     unsigned long lastToggleTime;
     bool buzzerState;
     bool isAlerting;
