@@ -9,7 +9,7 @@ public:
     static const bool DEBUG_SENSOR_OUTPUT = true;
 
     static constexpr float REST_GYRO_THRESHOLD = 5.0; 
-    static constexpr float TREMOR_LEVEL_1_THRESHOLD = 20.0; 
+    static constexpr float TREMOR_LEVEL_1_THRESHOLD = 45.0; 
     static constexpr float TREMOR_LEVEL_2_THRESHOLD = 120.0; 
     static constexpr float TREMOR_LEVEL_3_THRESHOLD = 250.0; 
 

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full System Architecture Diagram</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            color: #2c3e50;
+        }
+        .canvas-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 1400px;
+            overflow: auto;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Full System Architecture Diagram</h1>
+        <p style="color: #7f8c8d;">This is the detailed, exact layout you requested.</p>
+    </div>
+
+    <!-- The Mermaid Diagram Container -->
+    <div class="canvas-container" id="capture-area">
+        <div class="mermaid">
+%%{init: {'theme': 'default', 'themeVariables': { 'fontSize': '16px', 'fontFamily': 'arial'}}}%%
+graph TD
+    %% Subgraphs for System Components
+    subgraph Patient["Patient (Wearable Device)"]
+        direction TB
+        MPU2["MPU6050 #2<br>(Ankle / Foot)"]
+        MPU1["MPU6050 #1<br>(Wrist / Hand)"]
+        ESP32["ESP32<br>(Central Controller)"]
+        OLED["OLED Display<br>(Patient Status)"]
+        BUZZER["Buzzer / Motor<br>(Medical Alarm)"]
+    end
+
+    subgraph Logic["On-Device Detection (ESP32)"]
+        direction LR
+        TREMOR["Tremor Detection<br>At Rest Only<br>1.5s Confirmation Window"]
+        FOG["FOG Detection<br>State Machine<br>Walking → Candidate → FOG"]
+    end
+
+    subgraph Server["Web Application (Laravel Server)"]
+        direction TB
+        API["Laravel API<br>(Heartbeat, Events, Commands)"]
+        DB["MySQL Database<br>(Logs, Stats, Users)"]
+        DASH["Blade Dashboard<br>(Live UI, History, Stats)"]
+    end
+
+    subgraph Users["Users & Alerts"]
+        direction LR
+        DOC["Doctor / Caregiver<br>(Web Browser)"]
+        TELE["Telegram Bot<br>(Mobile Push Alerts)"]
+    end
+
+    %% Connections
+    MPU1 -- "I²C - Raw accel/gyro" --> ESP32
+    MPU2 -- "I²C - Raw accel/gyro" --> ESP32
+
+    ESP32 -- "Wi-Fi HTTP POST<br>Heartbeat / Events" --> API
+    API -- "HTTP Response<br>[action: STOP_BUZZER]" --> ESP32
+    ESP32 -- "Polls during heartbeat" --> API
+
+    ESP32 --> Logic
+    Logic -- "Tremor / FOG / OK" --> ESP32
+    ESP32 -- "Status text" --> OLED
+    ESP32 -- "FOG Confirmed" --> BUZZER
+    ESP32 -- "Rhythmic Cueing" --> BUZZER
+    ESP32 -- "Buzzer OFF" --> BUZZER
+
+    API -- "Cache Command" --> DB
+    DB -- "POST /command" --> API
+    API --> DB
+    DB --> DASH
+    DASH --> DB
+    
+    API -- "Telegram API" --> TELE
+    DASH -- "Stop Buzzer<br>command" --> DOC
+    DOC --> DASH
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</body>
+</html>

@@ -29,11 +29,11 @@ class HeartbeatController extends Controller
         $name = $patient ? $patient->full_name : 'Unknown';
         $time = now()->format('Y-m-d h:i A');
 
-        // Check for new Tremor
-        if ($validated['tremor_level'] > 0 && (!$prevStatus || $prevStatus['tremor_level'] == 0)) {
+        // Check for new Tremor (Level 3 only)
+        if ($validated['tremor_level'] == 3 && (!$prevStatus || $prevStatus['tremor_level'] < 3)) {
             $msg = "👤 *Patient:* {$name}\n";
             $msg .= "🎂 *Age:* {$age} years\n";
-            $msg .= "🫨 *Event:* TREMOR DETECTED\n";
+            $msg .= "🫨 *Event:* SEVERE TREMOR DETECTED\n";
             $msg .= "📈 *Level:* {$validated['tremor_level']}\n";
             $msg .= "⏰ *Start Time:* {$time}";
             \App\Services\TelegramService::sendAlert($msg);

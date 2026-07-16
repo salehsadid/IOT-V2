@@ -354,7 +354,9 @@
                 tremorStatus.innerText = 'TREMOR LVL ' + status.tremor_level;
                 tremorStatus.style.color = isDark ? '#f87171' : '#ef4444';
                 tremorStatus.style.textShadow = isDark ? '0 0 20px rgba(248, 113, 113, 0.4)' : 'none';
-                if (lastTremorLevel === 0) showAlert('Tremor Detected!', 'Patient is experiencing a Level ' + status.tremor_level + ' Tremor.');
+                if (status.tremor_level >= 2 && lastTremorLevel < 2) {
+                    showAlert('Tremor Detected!', 'Patient is experiencing a Level ' + status.tremor_level + ' Tremor.');
+                }
             } else {
                 tremorStatus.innerText = 'NO TREMOR';
                 tremorStatus.style.color = isDark ? '#4ade80' : '#10b981';

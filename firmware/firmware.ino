@@ -7,19 +7,15 @@
 #include "DisplayManager.h"
 #include "BuzzerController.h"
 #include "ApiClient.h"
-
 SystemState systemState;
 SensorManager sensorManager(&systemState);
 DetectionManager detectionManager(&systemState);
 DisplayManager displayManager(&systemState);
 BuzzerController buzzerController(&systemState);
 ApiClient apiClient(&systemState);
-
 void setup() {
-
     Logger::init();
     Logger::info("Starting Parkinson's Monitoring System ESP32 Firmware...");
-
     Config::init();
 
     sensorManager.init();
@@ -30,15 +26,12 @@ void setup() {
 
     Logger::info("Setup complete. Entering main loop.");
 }
-
 void loop() {
-
     sensorManager.update();
     detectionManager.update();
     displayManager.update();
     buzzerController.update();
 
     apiClient.update();
-
     delay(10); 
 }

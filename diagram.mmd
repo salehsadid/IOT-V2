@@ -1,0 +1,54 @@
+graph TD
+    %% Subgraphs for System Components
+    subgraph Patient["Patient (Wearable Device)"]
+        direction TB
+        MPU2["MPU6050 #2<br>(Ankle / Foot)"]
+        MPU1["MPU6050 #1<br>(Wrist / Hand)"]
+        ESP32["ESP32<br>(Central Controller)"]
+        OLED["OLED Display<br>(Patient Status)"]
+        BUZZER["Buzzer / Motor<br>(Medical Alarm)"]
+    end
+
+    subgraph Logic["On-Device Detection (ESP32)"]
+        direction LR
+        TREMOR["Tremor Detection<br>At Rest Only<br>1.5s Confirmation Window"]
+        FOG["FOG Detection<br>State Machine<br>Walking → Candidate → FOG"]
+    end
+
+    subgraph Server["Web Application (Laravel Server)"]
+        direction TB
+        API["Laravel API<br>(Heartbeat, Events, Commands)"]
+        DB["MySQL Database<br>(Logs, Stats, Users)"]
+        DASH["Blade Dashboard<br>(Live UI, History, Stats)"]
+    end
+
+    subgraph Users["Users & Alerts"]
+        direction LR
+        DOC["Doctor / Caregiver<br>(Web Browser)"]
+        TELE["Telegram Bot<br>(Mobile Push Alerts)"]
+    end
+
+    %% Connections
+    MPU1 -- "I²C - Raw accel/gyro" --> ESP32
+    MPU2 -- "I²C - Raw accel/gyro" --> ESP32
+
+    ESP32 -- "Wi-Fi HTTP POST<br>Heartbeat / Events" --> API
+    API -- "HTTP Response<br>[action: STOP_BUZZER]" --> ESP32
+    ESP32 -- "Polls during heartbeat" --> API
+
+    ESP32 --> Logic
+    Logic -- "Tremor / FOG / OK" --> ESP32
+    ESP32 -- "Status text" --> OLED
+    ESP32 -- "FOG Confirmed" --> BUZZER
+    ESP32 -- "Rhythmic Cueing" --> BUZZER
+    ESP32 -- "Buzzer OFF" --> BUZZER
+
+    API -- "Cache Command" --> DB
+    DB -- "POST /command" --> API
+    API --> DB
+    DB --> DASH
+    DASH --> DB
+    
+    API -- "Telegram API" --> TELE
+    DASH -- "Stop Buzzer<br>command" --> DOC
+    DOC --> DASH
